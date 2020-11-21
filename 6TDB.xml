@@ -1,0 +1,1821 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.11.0+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>pdb</BlastOutput_db>
+  <BlastOutput_query-ID>Query_7588</BlastOutput_query-ID>
+  <BlastOutput_query-def>6TDB_1|Chains A,B,C,D|Neuropilin-2|Homo sapiens (9606)</BlastOutput_query-def>
+  <BlastOutput_query-len>162</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>F</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>Query_7588</Iteration_query-ID>
+  <Iteration_query-def>6TDB_1|Chains A,B,C,D|Neuropilin-2|Homo sapiens (9606)</Iteration_query-def>
+  <Iteration_query-len>162</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>pdb|5DQ0|A</Hit_id>
+  <Hit_def>Chain A, Neuropilin-2 [Homo sapiens]</Hit_def>
+  <Hit_accession>5DQ0_A</Hit_accession>
+  <Hit_len>162</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>343.199</Hsp_bit-score>
+      <Hsp_score>879</Hsp_score>
+      <Hsp_evalue>7.13286e-123</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>162</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>162</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>162</Hsp_identity>
+      <Hsp_positive>162</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>162</Hsp_align-len>
+      <Hsp_qseq>GHMFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTSGS</Hsp_qseq>
+      <Hsp_hseq>GHMFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTSGS</Hsp_hseq>
+      <Hsp_midline>GHMFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTSGS</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>2</Hit_num>
+  <Hit_id>pdb|4QDS|A</Hit_id>
+  <Hit_def>Chain A, Neuropilin-2 [Homo sapiens] &gt;pdb|4QDS|B Chain B, Neuropilin-2 [Homo sapiens]</Hit_def>
+  <Hit_accession>4QDS_A</Hit_accession>
+  <Hit_len>187</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>337.806</Hsp_bit-score>
+      <Hsp_score>865</Hsp_score>
+      <Hsp_evalue>2.1926e-120</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>159</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>160</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>158</Hsp_identity>
+      <Hsp_positive>158</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>158</Hsp_align-len>
+      <Hsp_qseq>HMFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_qseq>
+      <Hsp_hseq>HMFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_hseq>
+      <Hsp_midline>HMFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>29.6462</Hsp_bit-score>
+      <Hsp_score>65</Hsp_score>
+      <Hsp_evalue>1.48341</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>27</Hsp_query-to>
+      <Hsp_hit-from>164</Hsp_hit-from>
+      <Hsp_hit-to>185</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>15</Hsp_identity>
+      <Hsp_positive>17</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>22</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASST</Hsp_qseq>
+      <Hsp_hseq>CSNMLGMLSGLIADSQISASST</Hsp_hseq>
+      <Hsp_midline>C+  LGM SG IA+ QISASST</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>3</Hit_num>
+  <Hit_id>pdb|5DN2|A</Hit_id>
+  <Hit_def>Chain A, Neuropilin-2 [Homo sapiens] &gt;pdb|5DN2|B Chain B, Neuropilin-2 [Homo sapiens] &gt;pdb|5DN2|C Chain C, Neuropilin-2 [Homo sapiens] &gt;pdb|5DN2|D Chain D, Neuropilin-2 [Homo sapiens]</Hit_def>
+  <Hit_accession>5DN2_A</Hit_accession>
+  <Hit_len>156</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>331.257</Hsp_bit-score>
+      <Hsp_score>848</Hsp_score>
+      <Hsp_evalue>3.49492e-118</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>158</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>156</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>156</Hsp_identity>
+      <Hsp_positive>156</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>156</Hsp_align-len>
+      <Hsp_qseq>MFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRV</Hsp_qseq>
+      <Hsp_hseq>MFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRV</Hsp_hseq>
+      <Hsp_midline>MFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRV</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>4</Hit_num>
+  <Hit_id>pdb|2QQJ|A</Hit_id>
+  <Hit_def>Chain A, Neuropilin-2 [Homo sapiens]</Hit_def>
+  <Hit_accession>2QQJ_A</Hit_accession>
+  <Hit_len>325</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>335.495</Hsp_bit-score>
+      <Hsp_score>859</Hsp_score>
+      <Hsp_evalue>2.46633e-117</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>159</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>160</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>158</Hsp_identity>
+      <Hsp_positive>158</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>158</Hsp_align-len>
+      <Hsp_qseq>HMFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_qseq>
+      <Hsp_hseq>HMFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_hseq>
+      <Hsp_midline>HMFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>83.9593</Hsp_bit-score>
+      <Hsp_score>206</Hsp_score>
+      <Hsp_evalue>1.90385e-19</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>164</Hsp_hit-from>
+      <Hsp_hit-to>322</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>53</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>12</Hsp_gaps>
+      <Hsp_align-len>161</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNL---DSNKEYLQVDLRFLTMLTAIATQGAISRETQNGY----YVKSYKLEVSTNGEDWMVYRHGKNH--KVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWH-SGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>CSNMLGMLSGLIADSQISASST-QEYLWSPSAARLVSSRSGWFPRIPQAQPGEEWLQVDLGTPKTVKGVIIQGARGGDSITAVEARAFVRKFKVSYSLNGKDWEYIQDPRTQQPKLFEGNMHYDTPDIRRFD-PIPAQYVRVYPERWSPAGIGMRLEVLGC</Hsp_hseq>
+      <Hsp_midline>C+  LGM SG IA+ QISASST  +  W+P  +RL    +GW P +      +E+LQVDL     +  +  QGA   ++        +V+ +K+  S NG+DW   +  +    K+F+ N       + +   P+  ++VR+ P+ W  +GI +RLE+ GC</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>5</Hit_num>
+  <Hit_id>pdb|4QDQ|A</Hit_id>
+  <Hit_def>Chain A, Neuropilin-2 [Homo sapiens] &gt;pdb|4QDQ|B Chain B, Neuropilin-2 [Homo sapiens]</Hit_def>
+  <Hit_accession>4QDQ_A</Hit_accession>
+  <Hit_len>329</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>328.946</Hsp_bit-score>
+      <Hsp_score>842</Hsp_score>
+      <Hsp_evalue>1.02569e-114</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>159</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>159</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>156</Hsp_identity>
+      <Hsp_positive>156</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>159</Hsp_align-len>
+      <Hsp_qseq>GHMFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_qseq>
+      <Hsp_hseq>GSHMQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_hseq>
+      <Hsp_midline>G   QCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>85.1149</Hsp_bit-score>
+      <Hsp_score>209</Hsp_score>
+      <Hsp_evalue>6.46064e-20</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>160</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>325</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>55</Hsp_identity>
+      <Hsp_positive>87</Hsp_positive>
+      <Hsp_gaps>12</Hsp_gaps>
+      <Hsp_align-len>165</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNL---DSNKEYLQVDLRFLTMLTAIATQGAISRETQNGY----YVKSYKLEVSTNGEDWMVYRHGKNH--KVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWH-SGIALRLELFGCRVTS</Hsp_qseq>
+      <Hsp_hseq>CSNMLGMLSGLIADSQISASST-QEYLWSPSAARLVSSRSGWFPRIPQAQPGEEWLQVDLGTPKTVKGVIIQGARGGDSITAVEARAFVRKFKVSYSLNGKDWEYIQDPRTQQPKLFEGNMHYDTPDIRRFD-PIPAQYVRVYPERWSPAGIGMRLEVLGCDWTS</Hsp_hseq>
+      <Hsp_midline>C+  LGM SG IA+ QISASST  +  W+P  +RL    +GW P +      +E+LQVDL     +  +  QGA   ++        +V+ +K+  S NG+DW   +  +    K+F+ N       + +   P+  ++VR+ P+ W  +GI +RLE+ GC  TS</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>6</Hit_num>
+  <Hit_id>pdb|4QDR|A</Hit_id>
+  <Hit_def>Chain A, Neuropilin-2 [Homo sapiens]</Hit_def>
+  <Hit_accession>4QDR_A</Hit_accession>
+  <Hit_len>324</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>326.635</Hsp_bit-score>
+      <Hsp_score>836</Hsp_score>
+      <Hsp_evalue>8.08596e-114</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>159</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>159</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>155</Hsp_identity>
+      <Hsp_positive>155</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>159</Hsp_align-len>
+      <Hsp_qseq>GHMFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_qseq>
+      <Hsp_hseq>GSHMQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWRPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_hseq>
+      <Hsp_midline>G   QCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGW PNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>83.9593</Hsp_bit-score>
+      <Hsp_score>206</Hsp_score>
+      <Hsp_evalue>2.04461e-19</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>321</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>53</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>12</Hsp_gaps>
+      <Hsp_align-len>161</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNL---DSNKEYLQVDLRFLTMLTAIATQGAISRETQNGY----YVKSYKLEVSTNGEDWMVYRHGKNH--KVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWH-SGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>CSNMLGMLSGLIADSQISASST-QEYLWSPSAARLVSSRSGWFPRIPQAQPGEEWLQVDLGTPKTVKGVIIQGARGGDSITAVEARAFVRKFKVSYSLNGKDWEYIQDPRTQQPKLFEGNMHYDTPDIRRFD-PIPAQYVRVYPERWSPAGIGMRLEVLGC</Hsp_hseq>
+      <Hsp_midline>C+  LGM SG IA+ QISASST  +  W+P  +RL    +GW P +      +E+LQVDL     +  +  QGA   ++        +V+ +K+  S NG+DW   +  +    K+F+ N       + +   P+  ++VR+ P+ W  +GI +RLE+ GC</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>7</Hit_num>
+  <Hit_id>pdb|2QQO|A</Hit_id>
+  <Hit_def>Chain A, Neuropilin-2 [Homo sapiens] &gt;pdb|2QQO|B Chain B, Neuropilin-2 [Homo sapiens]</Hit_def>
+  <Hit_accession>2QQO_A</Hit_accession>
+  <Hit_len>460</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>328.946</Hsp_bit-score>
+      <Hsp_score>842</Hsp_score>
+      <Hsp_evalue>6.69058e-113</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>161</Hsp_query-to>
+      <Hsp_hit-from>134</Hsp_hit-from>
+      <Hsp_hit-to>291</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>156</Hsp_identity>
+      <Hsp_positive>156</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>158</Hsp_align-len>
+      <Hsp_qseq>FQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTSG</Hsp_qseq>
+      <Hsp_hseq>FQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTDA</Hsp_hseq>
+      <Hsp_midline>FQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT  </Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>83.5741</Hsp_bit-score>
+      <Hsp_score>205</Hsp_score>
+      <Hsp_evalue>5.1399e-19</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>293</Hsp_hit-from>
+      <Hsp_hit-to>451</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>53</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>12</Hsp_gaps>
+      <Hsp_align-len>161</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNL---DSNKEYLQVDLRFLTMLTAIATQGAISRETQNGY----YVKSYKLEVSTNGEDWMVYRHGKNH--KVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWH-SGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>CSNMLGMLSGLIADSQISASST-QEYLWSPSAARLVSSRSGWFPRIPQAQPGEEWLQVDLGTPKTVKGVIIQGARGGDSITAVEARAFVRKFKVSYSLNGKDWEYIQDPRTQQPKLFEGNMHYDTPDIRRFD-PIPAQYVRVYPERWSPAGIGMRLEVLGC</Hsp_hseq>
+      <Hsp_midline>C+  LGM SG IA+ QISASST  +  W+P  +RL    +GW P +      +E+LQVDL     +  +  QGA   ++        +V+ +K+  S NG+DW   +  +    K+F+ N       + +   P+  ++VR+ P+ W  +GI +RLE+ GC</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>8</Hit_num>
+  <Hit_id>pdb|2QQK|A</Hit_id>
+  <Hit_def>Chain A, Neuropilin-2 [Homo sapiens] &gt;pdb|2QQL|A Chain A, Neuropilin-2 [Homo sapiens]</Hit_def>
+  <Hit_accession>2QQK_A</Hit_accession>
+  <Hit_len>579</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>329.331</Hsp_bit-score>
+      <Hsp_score>843</Hsp_score>
+      <Hsp_evalue>1.64959e-111</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>161</Hsp_query-to>
+      <Hsp_hit-from>253</Hsp_hit-from>
+      <Hsp_hit-to>410</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>156</Hsp_identity>
+      <Hsp_positive>156</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>158</Hsp_align-len>
+      <Hsp_qseq>FQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTSG</Hsp_qseq>
+      <Hsp_hseq>FQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTDA</Hsp_hseq>
+      <Hsp_midline>FQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT  </Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>83.5741</Hsp_bit-score>
+      <Hsp_score>205</Hsp_score>
+      <Hsp_evalue>6.56803e-19</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>159</Hsp_query-to>
+      <Hsp_hit-from>412</Hsp_hit-from>
+      <Hsp_hit-to>573</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>54</Hsp_identity>
+      <Hsp_positive>86</Hsp_positive>
+      <Hsp_gaps>12</Hsp_gaps>
+      <Hsp_align-len>164</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNL---DSNKEYLQVDLRFLTMLTAIATQGAISRETQNGY----YVKSYKLEVSTNGEDWMVYRHGKNH--KVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWH-SGIALRLELFGCRVT</Hsp_qseq>
+      <Hsp_hseq>CSNMLGMLSGLIADSQISASST-QEYLWSPSAARLVSSRSGWFPRIPQAQPGEEWLQVDLGTPKTVKGVIIQGARGGDSITAVEARAFVRKFKVSYSLNGKDWEYIQDPRTQQPKLFEGNMHYDTPDIRRFD-PIPAQYVRVYPERWSPAGIGMRLEVLGCDWT</Hsp_hseq>
+      <Hsp_midline>C+  LGM SG IA+ QISASST  +  W+P  +RL    +GW P +      +E+LQVDL     +  +  QGA   ++        +V+ +K+  S NG+DW   +  +    K+F+ N       + +   P+  ++VR+ P+ W  +GI +RLE+ GC  T</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>9</Hit_num>
+  <Hit_id>pdb|2ORX|A</Hit_id>
+  <Hit_def>Chain A, Neuropilin-1 [Rattus norvegicus] &gt;pdb|2ORZ|A Chain A, Neuropilin-1 [Rattus norvegicus]</Hit_def>
+  <Hit_accession>2ORX_A</Hit_accession>
+  <Hit_len>314</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>176.792</Hsp_bit-score>
+      <Hsp_score>447</Hsp_score>
+      <Hsp_evalue>3.98182e-55</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>159</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>155</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>77</Hsp_identity>
+      <Hsp_positive>114</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>156</Hsp_align-len>
+      <Hsp_qseq>FQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_qseq>
+      <Hsp_hseq>FKCMEALGMESGEIHSDQITASSQYGT-NWSVERSRLNYPENGWTPGEDSYREWIQVDLGLLRFVTAVGTQGAISKETKKKYYVKTYRVDISSNGEDWITLKEGNKAIIFQGNTNPTDVVFGVFPKPLITRFVRIKPASWETGISMRFEVYGCKIT</Hsp_hseq>
+      <Hsp_midline>F+C   LGMESG I ++QI+ASS Y    W+ ++SRL+  +NGWTP  DS +E++QVDL  L  +TA+ TQGAIS+ET+  YYVK+Y++++S+NGEDW+  + G    +FQ N + T+VV      PL+TRFVRI+P +W +GI++R E++GC++T</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>90.5077</Hsp_bit-score>
+      <Hsp_score>223</Hsp_score>
+      <Hsp_evalue>5.74023e-22</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>158</Hsp_query-to>
+      <Hsp_hit-from>157</Hsp_hit-from>
+      <Hsp_hit-to>313</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>62</Hsp_identity>
+      <Hsp_positive>88</Hsp_positive>
+      <Hsp_gaps>12</Hsp_gaps>
+      <Hsp_align-len>162</Hsp_align-len>
+      <Hsp_qseq>FQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGW----TPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDW-MVYRHGKNH-KVFQANNDATEVVLNKLHAPLLTRFVRIRPQ-TWHSGIALRLELFGCRV</Hsp_qseq>
+      <Hsp_hseq>YPCSGMLGMVSGLISDSQITASNQ-GDRNWMPENIRLVTSRTGWALPPSPHPYIN-EWLQVDLGDEKIVRGVIIQGGKHRE--NKVFMRKFKIAYSNNGSDWKMIMDDSKRKAKSFEGNNNYDTPEL-RAFTPLSTRFIRIYPERATHSGLGLRMELLGCEV</Hsp_hseq>
+      <Hsp_midline>+ C+  LGM SG I++ QI+AS+   D  W P+  RL     GW    +P+   N E+LQVDL    ++  +  QG   RE  N  +++ +K+  S NG DW M+    K   K F+ NN+     L +   PL TRF+RI P+   HSG+ LR+EL GC V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>10</Hit_num>
+  <Hit_id>pdb|3I97|A</Hit_id>
+  <Hit_def>Chain A, B1 Domain Of Human Neuropilin-1 Bound With Small Molecule Eg [Homo sapiens] &gt;pdb|3I97|B Chain B, B1 Domain Of Human Neuropilin-1 Bound With Small Molecule Eg [Homo sapiens] &gt;pdb|4RN5|A Chain A, Neuropilin-1 [Homo sapiens] &gt;pdb|5IYY|A Chain A, Neuropilin-1 [Homo sapiens] &gt;pdb|5IYY|B Chain B, Neuropilin-1 [Homo sapiens] &gt;pdb|5J1X|A Chain A, Neuropilin-1 [Homo sapiens] &gt;pdb|5J1X|B Chain B, Neuropilin-1 [Homo sapiens] &gt;pdb|5J1X|C Chain C, Neuropilin-1 [Homo sapiens] &gt;pdb|5J1X|D Chain D, Neuropilin-1 [Homo sapiens] &gt;pdb|5JGQ|A Chain A, Neuropilin-1 [Homo sapiens] &gt;pdb|5JGQ|B Chain B, Neuropilin-1 [Homo sapiens] &gt;pdb|5JHK|A Chain A, Neuropilin-1 [Homo sapiens] &gt;pdb|5JHK|B Chain B, Neuropilin-1 [Homo sapiens] &gt;pdb|6FMC|A Chain A, Neuropilin-1 [Homo sapiens] &gt;pdb|6FMF|A Chain A, Neuropilin-1 [Homo sapiens]</Hit_def>
+  <Hit_accession>3I97_A</Hit_accession>
+  <Hit_len>158</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>169.859</Hsp_bit-score>
+      <Hsp_score>429</Hsp_score>
+      <Hsp_evalue>2.39235e-54</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>159</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>158</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>84</Hsp_identity>
+      <Hsp_positive>119</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>159</Hsp_align-len>
+      <Hsp_qseq>GHMFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_qseq>
+      <Hsp_hseq>GHMFKCMEALGMESGEIHSDQITASSQYST-NWSAERSRLNYPENGWTPGEDSYREWIQVDLGLLRFVTAVGTQGAISKETKKKYYVKTYKIDVSSNGEDWITIKEGNKPVLFQGNTNPTDVVVAVFPKPLITRFVRIKPATWETGISMRFEVYGCKIT</Hsp_hseq>
+      <Hsp_midline>GHMF+C   LGMESG I ++QI+ASS YS   W+ ++SRL+  +NGWTP  DS +E++QVDL  L  +TA+ TQGAIS+ET+  YYVK+YK++VS+NGEDW+  + G    +FQ N + T+VV+     PL+TRFVRI+P TW +GI++R E++GC++T</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>11</Hit_num>
+  <Hit_id>pdb|2QQN|A</Hit_id>
+  <Hit_def>Chain A, Neuropilin-1 [Homo sapiens]</Hit_def>
+  <Hit_accession>2QQN_A</Hit_accession>
+  <Hit_len>159</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>167.933</Hsp_bit-score>
+      <Hsp_score>424</Hsp_score>
+      <Hsp_evalue>1.31389e-53</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>159</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>159</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>83</Hsp_identity>
+      <Hsp_positive>118</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>158</Hsp_align-len>
+      <Hsp_qseq>HMFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_qseq>
+      <Hsp_hseq>HMFKCMEALGMESGEIHSDQITASSQYST-NWSAERSRLNYPENGWTPGEDSYREWIQVDLGLLRFVTAVGTQGAISKETKKKYYVKTYKIDVSSNGEDWITIKEGNKPVLFQGNTNPTDVVVAVFPKPLITRFVRIKPATWETGISMRFEVYGCKIT</Hsp_hseq>
+      <Hsp_midline>HMF+C   LGMESG I ++QI+ASS YS   W+ ++SRL+  +NGWTP  DS +E++QVDL  L  +TA+ TQGAIS+ET+  YYVK+YK++VS+NGEDW+  + G    +FQ N + T+VV+     PL+TRFVRI+P TW +GI++R E++GC++T</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>12</Hit_num>
+  <Hit_id>pdb|4GZ9|A</Hit_id>
+  <Hit_def>Chain A, Neuropilin-1 [Mus musculus] &gt;pdb|4GZA|H Chain H, Neuropilin-1 [Mus musculus]</Hit_def>
+  <Hit_accession>4GZ9_A</Hit_accession>
+  <Hit_len>577</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>178.333</Hsp_bit-score>
+      <Hsp_score>451</Hsp_score>
+      <Hsp_evalue>2.79486e-53</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>159</Hsp_query-to>
+      <Hsp_hit-from>255</Hsp_hit-from>
+      <Hsp_hit-to>409</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>79</Hsp_identity>
+      <Hsp_positive>115</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>156</Hsp_align-len>
+      <Hsp_qseq>FQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_qseq>
+      <Hsp_hseq>FKCMEALGMESGEIHSDQITASSQYGT-NWSVERSRLNYPENGWTPGEDSYKEWIQVDLGLLRFVTAVGTQGAISKETKKKYYVKTYRVDISSNGEDWISLKEGNKAIIFQGNTNPTDVVLGVFSKPLITRFVRIKPVSWETGISMRFEVYGCKIT</Hsp_hseq>
+      <Hsp_midline>F+C   LGMESG I ++QI+ASS Y    W+ ++SRL+  +NGWTP  DS KE++QVDL  L  +TA+ TQGAIS+ET+  YYVK+Y++++S+NGEDW+  + G    +FQ N + T+VVL     PL+TRFVRI+P +W +GI++R E++GC++T</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>92.0485</Hsp_bit-score>
+      <Hsp_score>227</Hsp_score>
+      <Hsp_evalue>6.37534e-22</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>158</Hsp_query-to>
+      <Hsp_hit-from>411</Hsp_hit-from>
+      <Hsp_hit-to>567</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>60</Hsp_identity>
+      <Hsp_positive>91</Hsp_positive>
+      <Hsp_gaps>12</Hsp_gaps>
+      <Hsp_align-len>162</Hsp_align-len>
+      <Hsp_qseq>FQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGW----TPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDW--MVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQ-TWHSGIALRLELFGCRV</Hsp_qseq>
+      <Hsp_hseq>YPCSGMLGMVSGLISDSQITASNQ-ADRNWMPENIRLVTSRTGWALPPSPHPYTN-EWLQVDLGDEKIVRGVIIQGGKHRE--NKVFMRKFKIAYSNNGSDWKTIMDDSKRKAKSFEGNNNYDTPEL-RTFSPLSTRFIRIYPERATHSGLGLRMELLGCEV</Hsp_hseq>
+      <Hsp_midline>+ C+  LGM SG I++ QI+AS+  +D  W P+  RL     GW    +P+  +N E+LQVDL    ++  +  QG   RE  N  +++ +K+  S NG DW  ++    +  K F+ NN+     L +  +PL TRF+RI P+   HSG+ LR+EL GC V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>13</Hit_num>
+  <Hit_id>pdb|5IJR|A</Hit_id>
+  <Hit_def>Chain A, Neuropilin-1 [Homo sapiens] &gt;pdb|5IJR|B Chain B, Neuropilin-1 [Homo sapiens] &gt;pdb|5JGI|A Chain A, Neuropilin-1 [Homo sapiens] &gt;pdb|5JGI|B Chain B, Neuropilin-1 [Homo sapiens]</Hit_def>
+  <Hit_accession>5IJR_A</Hit_accession>
+  <Hit_len>156</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>164.851</Hsp_bit-score>
+      <Hsp_score>416</Hsp_score>
+      <Hsp_evalue>1.96082e-52</Hsp_evalue>
+      <Hsp_query-from>3</Hsp_query-from>
+      <Hsp_query-to>159</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>156</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>82</Hsp_identity>
+      <Hsp_positive>117</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>157</Hsp_align-len>
+      <Hsp_qseq>MFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_qseq>
+      <Hsp_hseq>MFKCMEALGMESGEIHSDQITASSQYST-NWSAERSRLNYPENGWTPGEDSYREWIQVDLGLLRFVTAVGTQGAISKETKKKYYVKTYKIDVSSNGEDWITIKEGNKPVLFQGNTNPTDVVVAVFPKPLITRFVRIKPATWETGISMRFEVYGCKIT</Hsp_hseq>
+      <Hsp_midline>MF+C   LGMESG I ++QI+ASS YS   W+ ++SRL+  +NGWTP  DS +E++QVDL  L  +TA+ TQGAIS+ET+  YYVK+YK++VS+NGEDW+  + G    +FQ N + T+VV+     PL+TRFVRI+P TW +GI++R E++GC++T</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>14</Hit_num>
+  <Hit_id>pdb|1KEX|A</Hit_id>
+  <Hit_def>Chain A, Crystal Structure Of The B1 Domain Of Human Neuropilin-1 [Homo sapiens]</Hit_def>
+  <Hit_accession>1KEX_A</Hit_accession>
+  <Hit_len>155</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>162.54</Hsp_bit-score>
+      <Hsp_score>410</Hsp_score>
+      <Hsp_evalue>1.48191e-51</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>159</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>155</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>81</Hsp_identity>
+      <Hsp_positive>116</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>156</Hsp_align-len>
+      <Hsp_qseq>FQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_qseq>
+      <Hsp_hseq>FKCMEALGMESGEIHSDQITASSQYST-NWSAERSRLNYPENGWTPGEDSYREWIQVDLGLLRFVTAVGTQGAISKETKKKYYVKTYKIDVSSNGEDWITIKEGNKPVLFQGNTNPTDVVVAVFPKPLITRFVRIKPATWETGISMRFEVYGCKIT</Hsp_hseq>
+      <Hsp_midline>F+C   LGMESG I ++QI+ASS YS   W+ ++SRL+  +NGWTP  DS +E++QVDL  L  +TA+ TQGAIS+ET+  YYVK+YK++VS+NGEDW+  + G    +FQ N + T+VV+     PL+TRFVRI+P TW +GI++R E++GC++T</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>15</Hit_num>
+  <Hit_id>pdb|5C7G|A</Hit_id>
+  <Hit_def>Chain A, Neuropilin-1 [Homo sapiens]</Hit_def>
+  <Hit_accession>5C7G_A</Hit_accession>
+  <Hit_len>161</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>162.54</Hsp_bit-score>
+      <Hsp_score>410</Hsp_score>
+      <Hsp_evalue>1.78664e-51</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>159</Hsp_query-to>
+      <Hsp_hit-from>7</Hsp_hit-from>
+      <Hsp_hit-to>161</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>81</Hsp_identity>
+      <Hsp_positive>116</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>156</Hsp_align-len>
+      <Hsp_qseq>FQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_qseq>
+      <Hsp_hseq>FKCMEALGMESGEIHSDQITASSQYST-NWSAERSRLNYPENGWTPGEDSYREWIQVDLGLLRFVTAVGTQGAISKETKKKYYVKTYKIDVSSNGEDWITIKEGNKPVLFQGNTNPTDVVVAVFPKPLITRFVRIKPATWETGISMRFEVYGCKIT</Hsp_hseq>
+      <Hsp_midline>F+C   LGMESG I ++QI+ASS YS   W+ ++SRL+  +NGWTP  DS +E++QVDL  L  +TA+ TQGAIS+ET+  YYVK+YK++VS+NGEDW+  + G    +FQ N + T+VV+     PL+TRFVRI+P TW +GI++R E++GC++T</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>16</Hit_num>
+  <Hit_id>pdb|2QQI|A</Hit_id>
+  <Hit_def>Chain A, Neuropilin-1 [Homo sapiens]</Hit_def>
+  <Hit_accession>2QQI_A</Hit_accession>
+  <Hit_len>318</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>167.162</Hsp_bit-score>
+      <Hsp_score>422</Hsp_score>
+      <Hsp_evalue>3.18128e-51</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>159</Hsp_query-to>
+      <Hsp_hit-from>3</Hsp_hit-from>
+      <Hsp_hit-to>159</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>83</Hsp_identity>
+      <Hsp_positive>118</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>158</Hsp_align-len>
+      <Hsp_qseq>HMFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_qseq>
+      <Hsp_hseq>HMFKCMEALGMESGEIHSDQITASSQYST-NWSAERSRLNYPENGWTPGEDSYREWIQVDLGLLRFVTAVGTQGAISKETKKKYYVKTYKIDVSSNGEDWITIKEGNKPVLFQGNTNPTDVVVAVFPKPLITRFVRIKPATWETGISMRFEVYGCKIT</Hsp_hseq>
+      <Hsp_midline>HMF+C   LGMESG I ++QI+ASS YS   W+ ++SRL+  +NGWTP  DS +E++QVDL  L  +TA+ TQGAIS+ET+  YYVK+YK++VS+NGEDW+  + G    +FQ N + T+VV+     PL+TRFVRI+P TW +GI++R E++GC++T</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>85.5001</Hsp_bit-score>
+      <Hsp_score>210</Hsp_score>
+      <Hsp_evalue>4.49045e-20</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>158</Hsp_query-to>
+      <Hsp_hit-from>161</Hsp_hit-from>
+      <Hsp_hit-to>317</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>61</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>12</Hsp_gaps>
+      <Hsp_align-len>162</Hsp_align-len>
+      <Hsp_qseq>FQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWT----PNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDW-MVYRHGKNH-KVFQANNDATEVVLNKLHAPLLTRFVRIRPQ-TWHSGIALRLELFGCRV</Hsp_qseq>
+      <Hsp_hseq>YPCSGMLGMVSGLISDSQIT-SSNQGDRNWMPENIRLVTSRSGWALPPAPHSYIN-EWLQIDLGEEKIVRGIIIQGGKHRE--NKVFMRKFKIGYSNNGSDWKMIMDDSKRKAKSFEGNNNYDTPELRTFPA-LSTRFIRIYPERATHGGLGLRMELLGCEV</Hsp_hseq>
+      <Hsp_midline>+ C+  LGM SG I++ QI+ SS   D  W P+  RL    +GW     P+   N E+LQ+DL    ++  I  QG   RE  N  +++ +K+  S NG DW M+    K   K F+ NN+     L    A L TRF+RI P+   H G+ LR+EL GC V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>17</Hit_num>
+  <Hit_id>pdb|4DEQ|A</Hit_id>
+  <Hit_def>Chain A, Neuropilin-1, Vascular Endothelial Growth Factor A [Homo sapiens] &gt;pdb|4DEQ|B Chain B, Neuropilin-1, Vascular Endothelial Growth Factor A [Homo sapiens]</Hit_def>
+  <Hit_accession>4DEQ_A</Hit_accession>
+  <Hit_len>218</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>160.614</Hsp_bit-score>
+      <Hsp_score>405</Hsp_score>
+      <Hsp_evalue>6.20411e-50</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>159</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>158</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>81</Hsp_identity>
+      <Hsp_positive>116</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>159</Hsp_align-len>
+      <Hsp_qseq>GHMFQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_qseq>
+      <Hsp_hseq>GSHMKCMEALGMESGEIHSDQITASSQYSTN-WSAERSRLNYPENGWTPGEDSYREWIQVDLGLLRFVTAVGTQGAISKETKKKYYVKTYKIDVSSNGEDWITIKEGNKPVLFQGNTNPTDVVVAVFPKPLITRFVRIKPATWETGISMRFEVYGCKIT</Hsp_hseq>
+      <Hsp_midline>G   +C   LGMESG I ++QI+ASS YS   W+ ++SRL+  +NGWTP  DS +E++QVDL  L  +TA+ TQGAIS+ET+  YYVK+YK++VS+NGEDW+  + G    +FQ N + T+VV+     PL+TRFVRI+P TW +GI++R E++GC++T</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>18</Hit_num>
+  <Hit_id>pdb|2QQM|A</Hit_id>
+  <Hit_def>Chain A, Neuropilin-1 [Homo sapiens]</Hit_def>
+  <Hit_accession>2QQM_A</Hit_accession>
+  <Hit_len>450</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>162.155</Hsp_bit-score>
+      <Hsp_score>409</Hsp_score>
+      <Hsp_evalue>4.55276e-48</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>159</Hsp_query-to>
+      <Hsp_hit-from>137</Hsp_hit-from>
+      <Hsp_hit-to>291</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>81</Hsp_identity>
+      <Hsp_positive>116</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>156</Hsp_align-len>
+      <Hsp_qseq>FQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVT</Hsp_qseq>
+      <Hsp_hseq>FKCMEALGMESGEIHSDQITASSQYST-NWSAERSRLNYPENGWTPGEDSYREWIQVDLGLLRFVTAVGTQGAISKETKKKYYVKTYKIDVSSNGEDWITIKEGNKPVLFQGNTNPTDVVVAVFPKPLITRFVRIKPATWETGISMRFEVYGCKIT</Hsp_hseq>
+      <Hsp_midline>F+C   LGMESG I ++QI+ASS YS   W+ ++SRL+  +NGWTP  DS +E++QVDL  L  +TA+ TQGAIS+ET+  YYVK+YK++VS+NGEDW+  + G    +FQ N + T+VV+     PL+TRFVRI+P TW +GI++R E++GC++T</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>85.8853</Hsp_bit-score>
+      <Hsp_score>211</Hsp_score>
+      <Hsp_evalue>9.35378e-20</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>158</Hsp_query-to>
+      <Hsp_hit-from>293</Hsp_hit-from>
+      <Hsp_hit-to>449</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>61</Hsp_identity>
+      <Hsp_positive>84</Hsp_positive>
+      <Hsp_gaps>10</Hsp_gaps>
+      <Hsp_align-len>161</Hsp_align-len>
+      <Hsp_qseq>FQCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGDDNGWT--PNLDSN-KEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDW-MVYRHGKNH-KVFQANNDATEVVLNKLHAPLLTRFVRIRPQ-TWHSGIALRLELFGCRV</Hsp_qseq>
+      <Hsp_hseq>YPCSGMLGMVSGLISDSQIT-SSNQGDRNWMPENIRLVTSRSGWALPPAPHSYINEWLQIDLGEEKIVRGIIIQGGKHRE--NKVFMRKFKIGYSNNGSDWKMIMDDSKRKAKSFEGNNNYDTPELRTFPA-LSTRFIRIYPERATHGGLGLRMELLGCEV</Hsp_hseq>
+      <Hsp_midline>+ C+  LGM SG I++ QI+ SS   D  W P+  RL    +GW   P   S   E+LQ+DL    ++  I  QG   RE  N  +++ +K+  S NG DW M+    K   K F+ NN+     L    A L TRF+RI P+   H G+ LR+EL GC V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>19</Hit_num>
+  <Hit_id>pdb|4XZU|G</Hit_id>
+  <Hit_def>Chain G, Coagulation factor VIII [Homo sapiens] &gt;pdb|4XZU|M Chain M, Coagulation factor VIII [Homo sapiens]</Hit_def>
+  <Hit_accession>4XZU_G</Hit_accession>
+  <Hit_len>154</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>132.494</Hsp_bit-score>
+      <Hsp_score>332</Hsp_score>
+      <Hsp_evalue>1.11704e-39</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>66</Hsp_identity>
+      <Hsp_positive>96</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>155</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSD--GRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>CSMPLGMESKAISDAQITASSYFTNMFATWSPSKARLHLQGRSNAWRPQVNNPKEWLQVDFQKTMKVTGVTTQGVKSLLT--SMYVKEFLISSSQDGHQWTLFFQNGKVKVFQGNQDSFTPVVNSLDPPLLTRYLRIHPQSWVHQIALRMEVLGC</Hsp_hseq>
+      <Hsp_midline>C++PLGMES  I++ QI+ASS +++    W+P ++RLH  G  N W P +++ KE+LQVD +    +T + TQG  S  T    YVK + +  S +G  W ++      KVFQ N D+   V+N L  PLLTR++RI PQ+W   IALR+E+ GC</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>20</Hit_num>
+  <Hit_id>pdb|3HNB|M</Hit_id>
+  <Hit_def>Chain M, Factor Viii Trp2313-His2315 Segment Is Involved In Membrane Shown By Crystal Structure Of Complex Between Factor Viii C And An Inhibitor [Homo sapiens] &gt;pdb|3HNY|M Chain M, Coagulation factor VIII [Homo sapiens] &gt;pdb|3HOB|A Chain A, Coagulation factor VIII [Homo sapiens] &gt;pdb|3HOB|M Chain M, Coagulation factor VIII [Homo sapiens]</Hit_def>
+  <Hit_accession>3HNB_M</Hit_accession>
+  <Hit_len>159</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>132.494</Hsp_bit-score>
+      <Hsp_score>332</Hsp_score>
+      <Hsp_evalue>1.39717e-39</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>157</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>158</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>66</Hsp_identity>
+      <Hsp_positive>96</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>156</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSD--GRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCR</Hsp_qseq>
+      <Hsp_hseq>CSMPLGMESKAISDAQITASSYFTNMFATWSPSKARLHLQGRSNAWRPQVNNPKEWLQVDFQKTMKVTGVTTQGVKSLLT--SMYVKEFLISSSQDGHQWTLFFQNGKVKVFQGNQDSFTPVVNSLDPPLLTRYLRIHPQSWVHQIALRMEVLGCE</Hsp_hseq>
+      <Hsp_midline>C++PLGMES  I++ QI+ASS +++    W+P ++RLH  G  N W P +++ KE+LQVD +    +T + TQG  S  T    YVK + +  S +G  W ++      KVFQ N D+   V+N L  PLLTR++RI PQ+W   IALR+E+ GC </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>21</Hit_num>
+  <Hit_id>pdb|4KI5|M</Hit_id>
+  <Hit_def>Chain M, Coagulation Factor Viii [Homo sapiens]</Hit_def>
+  <Hit_accession>4KI5_M</Hit_accession>
+  <Hit_len>183</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>132.494</Hsp_bit-score>
+      <Hsp_score>332</Hsp_score>
+      <Hsp_evalue>2.43359e-39</Hsp_evalue>
+      <Hsp_query-from>2</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>20</Hsp_hit-from>
+      <Hsp_hit-to>177</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>68</Hsp_identity>
+      <Hsp_positive>98</Hsp_positive>
+      <Hsp_gaps>7</Hsp_gaps>
+      <Hsp_align-len>160</Hsp_align-len>
+      <Hsp_qseq>HMF-QCNVPLGMESGRIANEQISASSTYSD--GRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>HMLNSCSMPLGMESKAISDAQITASSYFTNMFATWSPSKARLHLQGRSNAWRPQVNNPKEWLQVDFQKTMKVTGVTTQGVKSLLT--SMYVKEFLISSSQDGHQWTLFFQNGKVKVFQGNQDSFTPVVNSLDPPLLTRYLRIHPQSWVHQIALRMEVLGC</Hsp_hseq>
+      <Hsp_midline>HM   C++PLGMES  I++ QI+ASS +++    W+P ++RLH  G  N W P +++ KE+LQVD +    +T + TQG  S  T    YVK + +  S +G  W ++      KVFQ N D+   V+N L  PLLTR++RI PQ+W   IALR+E+ GC</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>22</Hit_num>
+  <Hit_id>pdb|1IQD|C</Hit_id>
+  <Hit_def>Chain C, Human Factor Viii C2 Domain Complexed To Human Monoclonal Bo2c11 Fab. [Homo sapiens]</Hit_def>
+  <Hit_accession>1IQD_C</Hit_accession>
+  <Hit_len>156</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>2.71049e-39</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>66</Hsp_identity>
+      <Hsp_positive>96</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>155</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSD--GRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>CSMPLGMESKAISDAQITASSYFTNMFATWSPSKARLHLQGRSNAWRPQVNNPKEWLQVDFQKTMKVTGVTTQGVKSLLT--SMYVKEFLISSSQDGHQWTLFFQNGKVKVFQGNQDSFTPVVNCLDPPLLTRYLRIHPQSWVHQIALRMEVLGC</Hsp_hseq>
+      <Hsp_midline>C++PLGMES  I++ QI+ASS +++    W+P ++RLH  G  N W P +++ KE+LQVD +    +T + TQG  S  T    YVK + +  S +G  W ++      KVFQ N D+   V+N L  PLLTR++RI PQ+W   IALR+E+ GC</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>23</Hit_num>
+  <Hit_id>pdb|1D7P|M</Hit_id>
+  <Hit_def>Chain M, Coagulation Factor Viii Precursor [Homo sapiens]</Hit_def>
+  <Hit_accession>1D7P_M</Hit_accession>
+  <Hit_len>159</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.724</Hsp_bit-score>
+      <Hsp_score>330</Hsp_score>
+      <Hsp_evalue>2.83448e-39</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>157</Hsp_query-to>
+      <Hsp_hit-from>4</Hsp_hit-from>
+      <Hsp_hit-to>157</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>66</Hsp_identity>
+      <Hsp_positive>96</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>156</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSD--GRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCR</Hsp_qseq>
+      <Hsp_hseq>CSMPLGMESKAISDAQITASSYFTNMFATWSPSKARLHLQGRSNAWRPQVNNPKEWLQVDFQKTMKVTGVTTQGVKSLLT--SMYVKEFLISSSQDGHQWTLFFQNGKVKVFQGNQDSFTPVVNCLDPPLLTRYLRIHPQSWVHQIALRMEVLGCE</Hsp_hseq>
+      <Hsp_midline>C++PLGMES  I++ QI+ASS +++    W+P ++RLH  G  N W P +++ KE+LQVD +    +T + TQG  S  T    YVK + +  S +G  W ++      KVFQ N D+   V+N L  PLLTR++RI PQ+W   IALR+E+ GC </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>24</Hit_num>
+  <Hit_id>pdb|4PT6|A</Hit_id>
+  <Hit_def>Chain A, Coagulation Factor Viii [Homo sapiens] &gt;pdb|4PT6|B Chain B, Coagulation Factor Viii [Homo sapiens]</Hit_def>
+  <Hit_accession>4PT6_A</Hit_accession>
+  <Hit_len>169</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>4.71801e-39</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>157</Hsp_query-to>
+      <Hsp_hit-from>5</Hsp_hit-from>
+      <Hsp_hit-to>158</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>67</Hsp_identity>
+      <Hsp_positive>94</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>156</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASS--TYSDGRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCR</Hsp_qseq>
+      <Hsp_hseq>CSMPLGMESKAISDAQITASSYACRGDTCWSPSKARLHLQGRSNAWRPQVNNPKEWLQVDFQKTMKVTGVTTQGVKSAAT--SMYVKEFLISSSQDGHQWTLFFQNGKVKVFQGNQDSFTPVVNSLDPPLLTRYLRIHPQSWVHQIALRMEVLGCE</Hsp_hseq>
+      <Hsp_midline>C++PLGMES  I++ QI+ASS     D  W+P ++RLH  G  N W P +++ KE+LQVD +    +T + TQG  S  T    YVK + +  S +G  W ++      KVFQ N D+   V+N L  PLLTR++RI PQ+W   IALR+E+ GC </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>25</Hit_num>
+  <Hit_id>pdb|4MO3|M</Hit_id>
+  <Hit_def>Chain M, Coagulation factor VIII [Sus scrofa]</Hit_def>
+  <Hit_accession>4MO3_M</Hit_accession>
+  <Hit_len>177</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>129.413</Hsp_bit-score>
+      <Hsp_score>324</Hsp_score>
+      <Hsp_evalue>3.0986e-38</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>23</Hsp_hit-from>
+      <Hsp_hit-to>175</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>65</Hsp_identity>
+      <Hsp_positive>95</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>155</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSD--GRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>CSMPLGMQNKAISDSQITASSHLSNIFATWSPSQARLHLQGRTNAWRPRVSSAEEWLQVDLQKTVKVTGITTQGV--KSLLSSMYVKEFLVSSSQDGRRWTLFLQDGHTKVFQGNQDSSTPVVNALDPPLFTRYLRIHPTSWAQHIALRLEVLGC</Hsp_hseq>
+      <Hsp_midline>C++PLGM++  I++ QI+ASS  S+    W+P Q+RLH  G  N W P + S +E+LQVDL+    +T I TQG   +   +  YVK + +  S +G  W ++    + KVFQ N D++  V+N L  PL TR++RI P +W   IALRLE+ GC</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>26</Hit_num>
+  <Hit_id>pdb|1CZS|A</Hit_id>
+  <Hit_def>Chain A, Crystal Structure Of The C2 Domain Of Human Coagulation Factor V: Complex With Phenylmercury [Homo sapiens] &gt;pdb|1CZT|A Chain A, Crystal Structure Of The C2 Domain Of Human Coagulation Factor V [Homo sapiens] &gt;pdb|1CZV|A Chain A, Crystal Structure Of The C2 Domain Of Human Coagulation Factor V: Dimeric Crystal Form [Homo sapiens] &gt;pdb|1CZV|B Chain B, Crystal Structure Of The C2 Domain Of Human Coagulation Factor V: Dimeric Crystal Form [Homo sapiens]</Hit_def>
+  <Hit_accession>1CZS_A</Hit_accession>
+  <Hit_len>160</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>123.25</Hsp_bit-score>
+      <Hsp_score>308</Hsp_score>
+      <Hsp_evalue>6.36728e-36</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>158</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>159</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>64</Hsp_identity>
+      <Hsp_positive>99</Hsp_positive>
+      <Hsp_gaps>9</Hsp_gaps>
+      <Hsp_align-len>160</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASS---TYSDGRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKN--HKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRV</Hsp_qseq>
+      <Hsp_hseq>CSTPLGMENGKIENKQITASSFKKSWWGDYWEPFRARLNAQGRVNAWQAKANNNKQWLEIDLLKIKKITAIITQGCKSLSSE--MYVKSYTIHYSEQGVEWKPYRLKSSMVDKIFEGNTNTKGHVKNFFNPPIISRFIRVIPKTWNQSITLRLELFGCDI</Hsp_hseq>
+      <Hsp_midline>C+ PLGME+G+I N+QI+ASS   ++    W P ++RL+  G  N W    ++NK++L++DL  +  +TAI TQG  S  ++   YVKSY +  S  G +W  YR   +   K+F+ N +    V N  + P+++RF+R+ P+TW+  I LRLELFGC +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>27</Hit_num>
+  <Hit_id>pdb|3J2S|B</Hit_id>
+  <Hit_def>Chain B, Coagulation factor VIII light chain [Homo sapiens]</Hit_def>
+  <Hit_accession>3J2S_B</Hit_accession>
+  <Hit_len>642</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.954</Hsp_bit-score>
+      <Hsp_score>328</Hsp_score>
+      <Hsp_evalue>1.23477e-35</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>484</Hsp_hit-from>
+      <Hsp_hit-to>636</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>66</Hsp_identity>
+      <Hsp_positive>96</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>155</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSD--GRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>CSMPLGMESKAISDAQITASSYFTNMFATWSPSKARLHLQGRSNAWRPQVNNPKEWLQVDFQKTMKVTGVTTQGVKSLLT--SMYVKEFLISSSQDGHQWTLFFQNGKVKVFQGNQDSFTPVVNSLDPPLLTRYLRIHPQSWVHQIALRMEVLGC</Hsp_hseq>
+      <Hsp_midline>C++PLGMES  I++ QI+ASS +++    W+P ++RLH  G  N W P +++ KE+LQVD +    +T + TQG  S  T    YVK + +  S +G  W ++      KVFQ N D+   V+N L  PLLTR++RI PQ+W   IALR+E+ GC</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>92.0485</Hsp_bit-score>
+      <Hsp_score>227</Hsp_score>
+      <Hsp_evalue>7.01127e-22</Hsp_evalue>
+      <Hsp_query-from>5</Hsp_query-from>
+      <Hsp_query-to>162</Hsp_query-to>
+      <Hsp_hit-from>330</Hsp_hit-from>
+      <Hsp_hit-to>485</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>57</Hsp_identity>
+      <Hsp_positive>87</Hsp_positive>
+      <Hsp_gaps>16</Hsp_gaps>
+      <Hsp_align-len>165</Hsp_align-len>
+      <Hsp_qseq>QCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLH--GDDNGWTPNLDSNKE---YLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHK--VFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTSGS</Hsp_qseq>
+      <Hsp_hseq>KCQTPLGMASGHIRDFQITASGQY--GQWAPKLARLHYSGSINAW-----STKEPFSWIKVDLLAPMIIHGIKTQGA--RQKFSSLYISQFIIMYSLDGKKWQTYRGNSTGTLMVFFGNVDSSGIKHNIFNPPIIARYIRLHPTHYSIRSTLRMELMGCDLNSCS</Hsp_hseq>
+      <Hsp_midline>+C  PLGM SG I + QI+AS  Y  G+W P+ +RLH  G  N W     S KE   +++VDL    ++  I TQGA  R+  +  Y+  + +  S +G+ W  YR        VF  N D++ +  N  + P++ R++R+ P  +     LR+EL GC + S S</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>28</Hit_num>
+  <Hit_id>pdb|4BDV|B</Hit_id>
+  <Hit_def>Chain B, FACTOR VIIIA LIGHT CHAIN [Homo sapiens]</Hit_def>
+  <Hit_accession>4BDV_B</Hit_accession>
+  <Hit_len>685</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>1.37627e-35</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>527</Hsp_hit-from>
+      <Hsp_hit-to>679</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>66</Hsp_identity>
+      <Hsp_positive>96</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>155</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSD--GRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>CSMPLGMESKAISDAQITASSYFTNMFATWSPSKARLHLQGRSNAWRPQVNNPKEWLQVDFQKTMKVTGVTTQGVKSLLT--SMYVKEFLISSSQDGHQWTLFFQNGKVKVFQGNQDSFTPVVNSLDPPLLTRYLRIHPQSWVHQIALRMEVLGC</Hsp_hseq>
+      <Hsp_midline>C++PLGMES  I++ QI+ASS +++    W+P ++RLH  G  N W P +++ KE+LQVD +    +T + TQG  S  T    YVK + +  S +G  W ++      KVFQ N D+   V+N L  PLLTR++RI PQ+W   IALR+E+ GC</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>92.0485</Hsp_bit-score>
+      <Hsp_score>227</Hsp_score>
+      <Hsp_evalue>7.60562e-22</Hsp_evalue>
+      <Hsp_query-from>5</Hsp_query-from>
+      <Hsp_query-to>162</Hsp_query-to>
+      <Hsp_hit-from>373</Hsp_hit-from>
+      <Hsp_hit-to>528</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>57</Hsp_identity>
+      <Hsp_positive>87</Hsp_positive>
+      <Hsp_gaps>16</Hsp_gaps>
+      <Hsp_align-len>165</Hsp_align-len>
+      <Hsp_qseq>QCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLH--GDDNGWTPNLDSNKE---YLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHK--VFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTSGS</Hsp_qseq>
+      <Hsp_hseq>KCQTPLGMASGHIRDFQITASGQY--GQWAPKLARLHYSGSINAW-----STKEPFSWIKVDLLAPMIIHGIKTQGA--RQKFSSLYISQFIIMYSLDGKKWQTYRGNSTGTLMVFFGNVDSSGIKHNIFNPPIIARYIRLHPTHYSIRSTLRMELMGCDLNSCS</Hsp_hseq>
+      <Hsp_midline>+C  PLGM SG I + QI+AS  Y  G+W P+ +RLH  G  N W     S KE   +++VDL    ++  I TQGA  R+  +  Y+  + +  S +G+ W  YR        VF  N D++ +  N  + P++ R++R+ P  +     LR+EL GC + S S</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>29</Hit_num>
+  <Hit_id>pdb|3CDZ|B</Hit_id>
+  <Hit_def>Chain B, Coagulation Factor Viii Light Chain [Homo sapiens] &gt;pdb|3J2Q|B Chain B, Coagulation Factor Viii Light Chain [Homo sapiens]</Hit_def>
+  <Hit_accession>3CDZ_B</Hit_accession>
+  <Hit_len>684</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>1.39972e-35</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>526</Hsp_hit-from>
+      <Hsp_hit-to>678</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>66</Hsp_identity>
+      <Hsp_positive>96</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>155</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSD--GRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>CSMPLGMESKAISDAQITASSYFTNMFATWSPSKARLHLQGRSNAWRPQVNNPKEWLQVDFQKTMKVTGVTTQGVKSLLT--SMYVKEFLISSSQDGHQWTLFFQNGKVKVFQGNQDSFTPVVNSLDPPLLTRYLRIHPQSWVHQIALRMEVLGC</Hsp_hseq>
+      <Hsp_midline>C++PLGMES  I++ QI+ASS +++    W+P ++RLH  G  N W P +++ KE+LQVD +    +T + TQG  S  T    YVK + +  S +G  W ++      KVFQ N D+   V+N L  PLLTR++RI PQ+W   IALR+E+ GC</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>92.0485</Hsp_bit-score>
+      <Hsp_score>227</Hsp_score>
+      <Hsp_evalue>7.53044e-22</Hsp_evalue>
+      <Hsp_query-from>5</Hsp_query-from>
+      <Hsp_query-to>162</Hsp_query-to>
+      <Hsp_hit-from>372</Hsp_hit-from>
+      <Hsp_hit-to>527</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>57</Hsp_identity>
+      <Hsp_positive>87</Hsp_positive>
+      <Hsp_gaps>16</Hsp_gaps>
+      <Hsp_align-len>165</Hsp_align-len>
+      <Hsp_qseq>QCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLH--GDDNGWTPNLDSNKE---YLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHK--VFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTSGS</Hsp_qseq>
+      <Hsp_hseq>KCQTPLGMASGHIRDFQITASGQY--GQWAPKLARLHYSGSINAW-----STKEPFSWIKVDLLAPMIIHGIKTQGA--RQKFSSLYISQFIIMYSLDGKKWQTYRGNSTGTLMVFFGNVDSSGIKHNIFNPPIIARYIRLHPTHYSIRSTLRMELMGCDLNSCS</Hsp_hseq>
+      <Hsp_midline>+C  PLGM SG I + QI+AS  Y  G+W P+ +RLH  G  N W     S KE   +++VDL    ++  I TQGA  R+  +  Y+  + +  S +G+ W  YR        VF  N D++ +  N  + P++ R++R+ P  +     LR+EL GC + S S</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>30</Hit_num>
+  <Hit_id>pdb|2R7E|B</Hit_id>
+  <Hit_def>Chain B, Coagulation Factor Viii [Homo sapiens]</Hit_def>
+  <Hit_accession>2R7E_B</Hit_accession>
+  <Hit_len>770</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>1.65149e-35</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>158</Hsp_query-to>
+      <Hsp_hit-from>612</Hsp_hit-from>
+      <Hsp_hit-to>766</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>66</Hsp_identity>
+      <Hsp_positive>96</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>157</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSD--GRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRV</Hsp_qseq>
+      <Hsp_hseq>CSMPLGMESKAISDAQITASSYFTNMFATWSPSKARLHLQGRSNAWRPQVNNPKEWLQVDFQKTMKVTGVTTQGVKSLLT--SMYVKEFLISSSQDGHQWTLFFQNGKVKVFQGNQDSFTPVVNSLDPPLLTRYLRIHPQSWVHQIALRMEVLGCEA</Hsp_hseq>
+      <Hsp_midline>C++PLGMES  I++ QI+ASS +++    W+P ++RLH  G  N W P +++ KE+LQVD +    +T + TQG  S  T    YVK + +  S +G  W ++      KVFQ N D+   V+N L  PLLTR++RI PQ+W   IALR+E+ GC  </Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>91.6633</Hsp_bit-score>
+      <Hsp_score>226</Hsp_score>
+      <Hsp_evalue>9.31589e-22</Hsp_evalue>
+      <Hsp_query-from>5</Hsp_query-from>
+      <Hsp_query-to>162</Hsp_query-to>
+      <Hsp_hit-from>458</Hsp_hit-from>
+      <Hsp_hit-to>613</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>57</Hsp_identity>
+      <Hsp_positive>87</Hsp_positive>
+      <Hsp_gaps>16</Hsp_gaps>
+      <Hsp_align-len>165</Hsp_align-len>
+      <Hsp_qseq>QCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLH--GDDNGWTPNLDSNKE---YLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHK--VFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTSGS</Hsp_qseq>
+      <Hsp_hseq>KCQTPLGMASGHIRDFQITASGQY--GQWAPKLARLHYSGSINAW-----STKEPFSWIKVDLLAPMIIHGIKTQGA--RQKFSSLYISQFIIMYSLDGKKWQTYRGNSTGTLMVFFGNVDSSGIKHNIFNPPIIARYIRLHPTHYSIRSTLRMELMGCDLNSCS</Hsp_hseq>
+      <Hsp_midline>+C  PLGM SG I + QI+AS  Y  G+W P+ +RLH  G  N W     S KE   +++VDL    ++  I TQGA  R+  +  Y+  + +  S +G+ W  YR        VF  N D++ +  N  + P++ R++R+ P  +     LR+EL GC + S S</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>31</Hit_num>
+  <Hit_id>pdb|5K8D|B</Hit_id>
+  <Hit_def>Chain B, Coagulation Factor Viii,ig Gamma-1 Chain C Region [Homo sapiens]</Hit_def>
+  <Hit_accession>5K8D_B</Hit_accession>
+  <Hit_len>865</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>131.339</Hsp_bit-score>
+      <Hsp_score>329</Hsp_score>
+      <Hsp_evalue>1.72847e-35</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>157</Hsp_query-to>
+      <Hsp_hit-from>481</Hsp_hit-from>
+      <Hsp_hit-to>634</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>66</Hsp_identity>
+      <Hsp_positive>96</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>156</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSD--GRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCR</Hsp_qseq>
+      <Hsp_hseq>CSMPLGMESKAISDAQITASSYFTNMFATWSPSKARLHLQGRSNAWRPQVNNPKEWLQVDFQKTMKVTGVTTQGVKSLLT--SMYVKEFLISSSQDGHQWTLFFQNGKVKVFQGNQDSFTPVVNSLDPPLLTRYLRIHPQSWVHQIALRMEVLGCE</Hsp_hseq>
+      <Hsp_midline>C++PLGMES  I++ QI+ASS +++    W+P ++RLH  G  N W P +++ KE+LQVD +    +T + TQG  S  T    YVK + +  S +G  W ++      KVFQ N D+   V+N L  PLLTR++RI PQ+W   IALR+E+ GC </Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>92.0485</Hsp_bit-score>
+      <Hsp_score>227</Hsp_score>
+      <Hsp_evalue>7.73077e-22</Hsp_evalue>
+      <Hsp_query-from>5</Hsp_query-from>
+      <Hsp_query-to>162</Hsp_query-to>
+      <Hsp_hit-from>327</Hsp_hit-from>
+      <Hsp_hit-to>482</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>57</Hsp_identity>
+      <Hsp_positive>87</Hsp_positive>
+      <Hsp_gaps>16</Hsp_gaps>
+      <Hsp_align-len>165</Hsp_align-len>
+      <Hsp_qseq>QCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLH--GDDNGWTPNLDSNKE---YLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHK--VFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTSGS</Hsp_qseq>
+      <Hsp_hseq>KCQTPLGMASGHIRDFQITASGQY--GQWAPKLARLHYSGSINAW-----STKEPFSWIKVDLLAPMIIHGIKTQGA--RQKFSSLYISQFIIMYSLDGKKWQTYRGNSTGTLMVFFGNVDSSGIKHNIFNPPIIARYIRLHPTHYSIRSTLRMELMGCDLNSCS</Hsp_hseq>
+      <Hsp_midline>+C  PLGM SG I + QI+AS  Y  G+W P+ +RLH  G  N W     S KE   +++VDL    ++  I TQGA  R+  +  Y+  + +  S +G+ W  YR        VF  N D++ +  N  + P++ R++R+ P  +     LR+EL GC + S S</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>32</Hit_num>
+  <Hit_id>pdb|6MF2|A</Hit_id>
+  <Hit_def>Chain A, Coagulation factor VIII [Homo sapiens]</Hit_def>
+  <Hit_accession>6MF2_A</Hit_accession>
+  <Hit_len>1512</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.954</Hsp_bit-score>
+      <Hsp_score>328</Hsp_score>
+      <Hsp_evalue>2.42906e-35</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>158</Hsp_query-to>
+      <Hsp_hit-from>1354</Hsp_hit-from>
+      <Hsp_hit-to>1508</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>66</Hsp_identity>
+      <Hsp_positive>96</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>157</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSD--GRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRV</Hsp_qseq>
+      <Hsp_hseq>CSMPLGMESKAISDAQITASSYFTNMFATWSPSKARLHLQGRSNAWRPQVNNPKEWLQVDFQKTMKVTGVTTQGVKSLLT--SMYVKEFLISSSQDGHQWTLFFQNGKVKVFQGNQDSFTPVVNSLDPPLLTRYLRIHPQSWVHQIALRMEVLGCEA</Hsp_hseq>
+      <Hsp_midline>C++PLGMES  I++ QI+ASS +++    W+P ++RLH  G  N W P +++ KE+LQVD +    +T + TQG  S  T    YVK + +  S +G  W ++      KVFQ N D+   V+N L  PLLTR++RI PQ+W   IALR+E+ GC  </Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>92.0485</Hsp_bit-score>
+      <Hsp_score>227</Hsp_score>
+      <Hsp_evalue>8.40357e-22</Hsp_evalue>
+      <Hsp_query-from>5</Hsp_query-from>
+      <Hsp_query-to>162</Hsp_query-to>
+      <Hsp_hit-from>1200</Hsp_hit-from>
+      <Hsp_hit-to>1355</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>57</Hsp_identity>
+      <Hsp_positive>87</Hsp_positive>
+      <Hsp_gaps>16</Hsp_gaps>
+      <Hsp_align-len>165</Hsp_align-len>
+      <Hsp_qseq>QCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLH--GDDNGWTPNLDSNKE---YLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHK--VFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTSGS</Hsp_qseq>
+      <Hsp_hseq>KCQTPLGMASGHIRDFQITASGQY--GQWAPKLARLHYSGSINAW-----STKEPFSWIKVDLLAPMIIHGIKTQGA--RQKFSSLYISQFIIMYSLDGKKWQTYRGNSTGTLMVFFGNVDSSGIKHNIFNPPIIARYIRLHPTHYSIRSTLRMELMGCDLNSCS</Hsp_hseq>
+      <Hsp_midline>+C  PLGM SG I + QI+AS  Y  G+W P+ +RLH  G  N W     S KE   +++VDL    ++  I TQGA  R+  +  Y+  + +  S +G+ W  YR        VF  N D++ +  N  + P++ R++R+ P  +     LR+EL GC + S S</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>33</Hit_num>
+  <Hit_id>pdb|6MF0|A</Hit_id>
+  <Hit_def>Chain A, Coagulation factor VIII chimera [Sus scrofa] &gt;pdb|6MF0|B Chain B, Coagulation factor VIII chimera [Sus scrofa]</Hit_def>
+  <Hit_accession>6MF0_A</Hit_accession>
+  <Hit_len>1467</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>130.954</Hsp_bit-score>
+      <Hsp_score>328</Hsp_score>
+      <Hsp_evalue>2.44741e-35</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>1309</Hsp_hit-from>
+      <Hsp_hit-to>1461</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>66</Hsp_identity>
+      <Hsp_positive>96</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>155</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSD--GRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>CSMPLGMESKAISDAQITASSYFTNMFATWSPSKARLHLQGRSNAWRPQVNNPKEWLQVDFQKTMKVTGVTTQGVKSLLT--SMYVKEFLISSSQDGHQWTLFFQNGKVKVFQGNQDSFTPVVNSLDPPLLTRYLRIHPQSWVHQIALRMEVLGC</Hsp_hseq>
+      <Hsp_midline>C++PLGMES  I++ QI+ASS +++    W+P ++RLH  G  N W P +++ KE+LQVD +    +T + TQG  S  T    YVK + +  S +G  W ++      KVFQ N D+   V+N L  PLLTR++RI PQ+W   IALR+E+ GC</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>92.0485</Hsp_bit-score>
+      <Hsp_score>227</Hsp_score>
+      <Hsp_evalue>7.68725e-22</Hsp_evalue>
+      <Hsp_query-from>5</Hsp_query-from>
+      <Hsp_query-to>162</Hsp_query-to>
+      <Hsp_hit-from>1155</Hsp_hit-from>
+      <Hsp_hit-to>1310</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>57</Hsp_identity>
+      <Hsp_positive>87</Hsp_positive>
+      <Hsp_gaps>16</Hsp_gaps>
+      <Hsp_align-len>165</Hsp_align-len>
+      <Hsp_qseq>QCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLH--GDDNGWTPNLDSNKE---YLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHK--VFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTSGS</Hsp_qseq>
+      <Hsp_hseq>KCQTPLGMASGHIRDFQITASGQY--GQWAPKLARLHYSGSINAW-----STKEPFSWIKVDLLAPMIIHGIKTQGA--RQKFSSLYISQFIIMYSLDGKKWQTYRGNSTGTLMVFFGNVDSSGIKHNIFNPPIIARYIRLHPTHYSIRSTLRMELMGCDLNSCS</Hsp_hseq>
+      <Hsp_midline>+C  PLGM SG I + QI+AS  Y  G+W P+ +RLH  G  N W     S KE   +++VDL    ++  I TQGA  R+  +  Y+  + +  S +G+ W  YR        VF  N D++ +  N  + P++ R++R+ P  +     LR+EL GC + S S</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>34</Hit_num>
+  <Hit_id>pdb|1SDD|B</Hit_id>
+  <Hit_def>Chain B, Coagulation Factor V [Bos taurus]</Hit_def>
+  <Hit_accession>1SDD_B</Hit_accession>
+  <Hit_len>647</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>129.028</Hsp_bit-score>
+      <Hsp_score>323</Hsp_score>
+      <Hsp_evalue>8.10571e-35</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>489</Hsp_hit-from>
+      <Hsp_hit-to>644</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>69</Hsp_identity>
+      <Hsp_positive>98</Hsp_positive>
+      <Hsp_gaps>9</Hsp_gaps>
+      <Hsp_align-len>158</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASS---TYSDGRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKN--HKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>CSTPLGMESGKIENKQITASSFKKSWWGNYWEPFLARLNAQGRVNAWQAKANNNNQWLQIDLLKIKKITAIVTQGCKSLSSE--MYVKSYTIHYSDQGTDWKPYREKSSMVDKIFEGNNNVRGHVKNFFNPPIISRFIRIIPKTWNQSIALRLELFGC</Hsp_hseq>
+      <Hsp_midline>C+ PLGMESG+I N+QI+ASS   ++    W P  +RL+  G  N W    ++N ++LQ+DL  +  +TAI TQG  S  ++   YVKSY +  S  G DW  YR   +   K+F+ NN+    V N  + P+++RF+RI P+TW+  IALRLELFGC</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>91.6633</Hsp_bit-score>
+      <Hsp_score>226</Hsp_score>
+      <Hsp_evalue>1.14984e-21</Hsp_evalue>
+      <Hsp_query-from>5</Hsp_query-from>
+      <Hsp_query-to>162</Hsp_query-to>
+      <Hsp_hit-from>329</Hsp_hit-from>
+      <Hsp_hit-to>490</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>55</Hsp_identity>
+      <Hsp_positive>92</Hsp_positive>
+      <Hsp_gaps>12</Hsp_gaps>
+      <Hsp_align-len>166</Hsp_align-len>
+      <Hsp_qseq>QCNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLH--GDDNGWTP---NLDSNKE-YLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKV--FQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTSGS</Hsp_qseq>
+      <Hsp_hseq>ECKMPMGLSTGLIADSQIQASEFW--GYWEPKLARLNNGGSYNAWIAEKLSTEFNPEPWIQVDMQKEVLLTGIQTQGA--KHYLKPYYTTEFCVAYSLDRKNWRIFKGNSTRNVMYFGGNSDASTIKENQIDPPVVARYIRISPTGSYNKPALRLELQGCEVNGCS</Hsp_hseq>
+      <Hsp_midline>+C +P+G+ +G IA+ QI AS  +  G W P+ +RL+  G  N W     + + N E ++QVD++   +LT I TQGA  +     YY   + +  S + ++W +++      V  F  N+DA+ +  N++  P++ R++RI P   ++  ALRLEL GC V   S</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>35</Hit_num>
+  <Hit_id>pdb|2L9L|A</Hit_id>
+  <Hit_def>Chain A, Lactadherin [Mus musculus]</Hit_def>
+  <Hit_accession>2L9L_A</Hit_accession>
+  <Hit_len>170</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>113.235</Hsp_bit-score>
+      <Hsp_score>282</Hsp_score>
+      <Hsp_evalue>5.4593e-32</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>7</Hsp_hit-from>
+      <Hsp_hit-to>162</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>66</Hsp_identity>
+      <Hsp_positive>86</Hsp_positive>
+      <Hsp_gaps>9</Hsp_gaps>
+      <Hsp_align-len>158</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSDGR-----WTPQQSRL--HGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>CSEPLGLKNNTIPDSQMSASSSYKTWNLRAFGWYPHLGRLDNQGKINAWTAQSNSAKEWLQVDLGTQRQVTGIITQGA--RDFGHIQYVASYKVAHSDDGVQWTVYEEQGSSKVFQGNLDNNSHKKNIFEKPFMARYVRVLPVSWHNRITLRLELLGC</Hsp_hseq>
+      <Hsp_midline>C+ PLG+++  I + Q+SASS+Y         W P   RL   G  N WT   +S KE+LQVDL     +T I TQGA  R+  +  YV SYK+  S +G  W VY    + KVFQ N D      N    P + R+VR+ P +WH+ I LRLEL GC</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>36</Hit_num>
+  <Hit_id>pdb|4BXS|V</Hit_id>
+  <Hit_def>Chain V, Venom Prothrombin Activator Pseutarin-c Non-catalytic Subunit [Pseudonaja textilis]</Hit_def>
+  <Hit_accession>4BXS_V</Hit_accession>
+  <Hit_len>1430</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>120.553</Hsp_bit-score>
+      <Hsp_score>301</Hsp_score>
+      <Hsp_evalue>1.01367e-31</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>158</Hsp_query-to>
+      <Hsp_hit-from>1273</Hsp_hit-from>
+      <Hsp_hit-to>1429</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>66</Hsp_identity>
+      <Hsp_positive>96</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>159</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSD--GRWTPQQSRLH--GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKN--HKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRV</Hsp_qseq>
+      <Hsp_hseq>CSVPLGMESGAIKNKEITASSYKKTWWSSWEPFLARLNLEGGTNAWQPEVNNKDQWLQIDLQHLTKITSIITQGATSMTT--SMYVKTFSIHYTDDNSTWKPYLDVRTSMEKVFTGNINSDGHVKHFFKPPILSRFIRIIPKTWNQYIALRIELFGCEV</Hsp_hseq>
+      <Hsp_midline>C+VPLGMESG I N++I+ASS        W P  +RL+  G  N W P +++  ++LQ+DL+ LT +T+I TQGA S  T    YVK++ +  + +   W  Y   +    KVF  N ++   V +    P+L+RF+RI P+TW+  IALR+ELFGC V</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>93.2041</Hsp_bit-score>
+      <Hsp_score>230</Hsp_score>
+      <Hsp_evalue>3.50914e-22</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>162</Hsp_query-to>
+      <Hsp_hit-from>1117</Hsp_hit-from>
+      <Hsp_hit-to>1274</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>53</Hsp_identity>
+      <Hsp_positive>91</Hsp_positive>
+      <Hsp_gaps>9</Hsp_gaps>
+      <Hsp_align-len>162</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLH--GDDNGWTP-NLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVY--RHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTSGS</Hsp_qseq>
+      <Hsp_hseq>CKLPMGLASGIIQDSQISASGHV--GYWEPKLARLNNTGKYNAWSIIKKEHEHPWIQIDLQRQVVITGIQTQGTV-QLLQHSYTVE-YFVTYSEDGQNWITFKGRHSETQMHFEGNSDGTTVKENHIDPPIIARYIRLHPTKFYNRPTFRIELLGCEVEGCS</Hsp_hseq>
+      <Hsp_midline>C +P+G+ SG I + QISAS     G W P+ +RL+  G  N W+    +    ++Q+DL+   ++T I TQG + +  Q+ Y V+ Y +  S +G++W+ +  RH +    F+ N+D T V  N +  P++ R++R+ P  +++    R+EL GC V   S</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>37</Hit_num>
+  <Hit_id>pdb|3BN6|A</Hit_id>
+  <Hit_def>Chain A, Lactadherin [Bos taurus]</Hit_def>
+  <Hit_accession>3BN6_A</Hit_accession>
+  <Hit_len>158</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>102.064</Hsp_bit-score>
+      <Hsp_score>253</Hsp_score>
+      <Hsp_evalue>1.087e-27</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>158</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>61</Hsp_identity>
+      <Hsp_positive>81</Hsp_positive>
+      <Hsp_gaps>11</Hsp_gaps>
+      <Hsp_align-len>160</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTY-----SDGRWTPQQSRL--HGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRH--GKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>CTEPLGLKDNTIPNKQITASSYYKTWGLSAFSWFPYYARLDNQGKFNAWTAQTNSASEWLQIDLGSQKRVTGIITQGA--RDFGHIQYVAAYRVAYGDDGVTWTEYKDPGASESKIFPGNMDNNSHKKNIFETPFQARFVRIQPVAWHNRITLRVELLGC</Hsp_hseq>
+      <Hsp_midline>C  PLG++   I N+QI+ASS Y     S   W P  +RL   G  N WT   +S  E+LQ+DL     +T I TQGA  R+  +  YV +Y++    +G  W  Y+       K+F  N D      N    P   RFVRI+P  WH+ I LR+EL GC</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>38</Hit_num>
+  <Hit_id>pdb|2PQS|A</Hit_id>
+  <Hit_def>Chain A, Crystal Structure Of The Bovine Lactadherin C2 Domain [Bos taurus] &gt;pdb|2PQS|B Chain B, Crystal Structure Of The Bovine Lactadherin C2 Domain [Bos taurus] &gt;pdb|2PQS|C Chain C, Crystal Structure Of The Bovine Lactadherin C2 Domain [Bos taurus] &gt;pdb|2PQS|D Chain D, Crystal Structure Of The Bovine Lactadherin C2 Domain [Bos taurus]</Hit_def>
+  <Hit_accession>2PQS_A</Hit_accession>
+  <Hit_len>159</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>102.064</Hsp_bit-score>
+      <Hsp_score>253</Hsp_score>
+      <Hsp_evalue>1.14076e-27</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>2</Hsp_hit-from>
+      <Hsp_hit-to>159</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>61</Hsp_identity>
+      <Hsp_positive>81</Hsp_positive>
+      <Hsp_gaps>11</Hsp_gaps>
+      <Hsp_align-len>160</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTY-----SDGRWTPQQSRL--HGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRH--GKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>CTEPLGLKDNTIPNKQITASSYYKTWGLSAFSWFPYYARLDNQGKFNAWTAQTNSASEWLQIDLGSQKRVTGIITQGA--RDFGHIQYVAAYRVAYGDDGVTWTEYKDPGASESKIFPGNMDNNSHKKNIFETPFQARFVRIQPVAWHNRITLRVELLGC</Hsp_hseq>
+      <Hsp_midline>C  PLG++   I N+QI+ASS Y     S   W P  +RL   G  N WT   +S  E+LQ+DL     +T I TQGA  R+  +  YV +Y++    +G  W  Y+       K+F  N D      N    P   RFVRI+P  WH+ I LR+EL GC</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>39</Hit_num>
+  <Hit_id>pdb|2Z4F|A</Hit_id>
+  <Hit_def>Chain A, Discoidin domain-containing receptor 2 [Homo sapiens]</Hit_def>
+  <Hit_accession>2Z4F_A</Hit_accession>
+  <Hit_len>173</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>95.9005</Hsp_bit-score>
+      <Hsp_score>237</Hsp_score>
+      <Hsp_evalue>3.79127e-25</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>162</Hsp_query-to>
+      <Hsp_hit-from>9</Hsp_hit-from>
+      <Hsp_hit-to>169</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>89</Hsp_positive>
+      <Hsp_gaps>16</Hsp_gaps>
+      <Hsp_align-len>167</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGD--DNGWTPNL----DSNKEYLQVDLRFLTMLTAIATQGAISRETQNGY---YVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHS-GIALRLELFGCRVTSGS</Hsp_qseq>
+      <Hsp_hseq>CRYPLGMSGGQIPDEDITASSQWSEST-AAKYGRLDSEEGDGAWCPEIPVEPDDLKEFLQIDLHTLHFITLVGTQG----RHAGGHGIEFAPMYKINYSRDGTRWISWRNRHGKQVLDGNSNPYDIFLKDLEPPIVARFVRFIPVTDHSMNVCMRVELYGC-VGSGS</Hsp_hseq>
+      <Hsp_midline>C  PLGM  G+I +E I+ASS +S+     +  RL  +  D  W P +    D  KE+LQ+DL  L  +T + TQG        G+   +   YK+  S +G  W+ +R+    +V   N++  ++ L  L  P++ RFVR  P T HS  + +R+EL+GC V SGS</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>40</Hit_num>
+  <Hit_id>pdb|2WUH|A</Hit_id>
+  <Hit_def>Chain A, Crystal Structure Of The Ddr2 Discoidin Domain Bound To A Triple-Helical Collagen Peptide [Homo sapiens]</Hit_def>
+  <Hit_accession>2WUH_A</Hit_accession>
+  <Hit_len>178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>94.3597</Hsp_bit-score>
+      <Hsp_score>233</Hsp_score>
+      <Hsp_evalue>1.69746e-24</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>18</Hsp_hit-from>
+      <Hsp_hit-to>173</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>55</Hsp_identity>
+      <Hsp_positive>85</Hsp_positive>
+      <Hsp_gaps>15</Hsp_gaps>
+      <Hsp_align-len>161</Hsp_align-len>
+      <Hsp_qseq>CNVPLGMESGRIANEQISASSTYSDGRWTPQQSRLHGD--DNGWTPNL----DSNKEYLQVDLRFLTMLTAIATQGAISRETQNGY---YVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHS-GIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>CRYPLGMSGGQIPDEDITASSQWSEST-AAKYGRLDSEEGDGAWCPEIPVEPDDLKEFLQIDLHTLHFITLVGTQG----RHAGGHGIEFAPMYKINYSRDGTRWISWRNRHGKQVLDGNSNPYDIFLKDLEPPIVARFVRFIPVTDHSMNVCMRVELYGC</Hsp_hseq>
+      <Hsp_midline>C  PLGM  G+I +E I+ASS +S+     +  RL  +  D  W P +    D  KE+LQ+DL  L  +T + TQG        G+   +   YK+  S +G  W+ +R+    +V   N++  ++ L  L  P++ RFVR  P T HS  + +R+EL+GC</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>41</Hit_num>
+  <Hit_id>pdb|3JD6|O</Hit_id>
+  <Hit_def>Chain O, Retinoschisin [Homo sapiens]</Hit_def>
+  <Hit_accession>3JD6_O</Hit_accession>
+  <Hit_len>207</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>90.1225</Hsp_bit-score>
+      <Hsp_score>222</Hsp_score>
+      <Hsp_evalue>1.28183e-22</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>45</Hsp_hit-from>
+      <Hsp_hit-to>196</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>52</Hsp_identity>
+      <Hsp_positive>83</Hsp_positive>
+      <Hsp_gaps>14</Hsp_gaps>
+      <Hsp_align-len>157</Hsp_align-len>
+      <Hsp_qseq>PLGMESGRIANEQISASST------YSDGRWTPQQSRLHGDDNG--WTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYR-HGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>PLGFESGEVTPDQITCSNPEQYVGWYSS--WTANKARLNSQGFGCAWLSKFQDSSQWLQIDLKEIKVISGILTQGRCDIDEWMTKYSVQYRTDERLN---WIYYKDQTGNNRVFYGNSDRTSTVQNLLRPPIISRFIRLIPLGWHVRIAIRMELLEC</Hsp_hseq>
+      <Hsp_midline>PLG ESG +  +QI+ S+       YS   WT  ++RL+    G  W      + ++LQ+DL+ + +++ I TQG    +     Y   Y+ +   N   W+ Y+    N++VF  N+D T  V N L  P+++RF+R+ P  WH  IA+R+EL  C</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>42</Hit_num>
+  <Hit_id>pdb|5N6W|A</Hit_id>
+  <Hit_def>Chain A, Retinoschisin [Homo sapiens] &gt;pdb|5N6W|B Chain B, Retinoschisin [Homo sapiens] &gt;pdb|5N6W|C Chain C, Retinoschisin [Homo sapiens] &gt;pdb|5N6W|D Chain D, Retinoschisin [Homo sapiens] &gt;pdb|5N6W|E Chain E, Retinoschisin [Homo sapiens] &gt;pdb|5N6W|F Chain F, Retinoschisin [Homo sapiens] &gt;pdb|5N6W|G Chain G, Retinoschisin [Homo sapiens] &gt;pdb|5N6W|H Chain H, Retinoschisin [Homo sapiens] &gt;pdb|5N6W|I Chain I, Retinoschisin [Homo sapiens] &gt;pdb|5N6W|J Chain J, Retinoschisin [Homo sapiens] &gt;pdb|5N6W|K Chain K, Retinoschisin [Homo sapiens] &gt;pdb|5N6W|L Chain L, Retinoschisin [Homo sapiens] &gt;pdb|5N6W|M Chain M, Retinoschisin [Homo sapiens] &gt;pdb|5N6W|N Chain N, Retinoschisin [Homo sapiens] &gt;pdb|5N6W|O Chain O, Retinoschisin [Homo sapiens] &gt;pdb|5N6W|P Chain P, Retinoschisin [Homo sapiens]</Hit_def>
+  <Hit_accession>5N6W_A</Hit_accession>
+  <Hit_len>201</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>89.7373</Hsp_bit-score>
+      <Hsp_score>221</Hsp_score>
+      <Hsp_evalue>1.56554e-22</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>45</Hsp_hit-from>
+      <Hsp_hit-to>196</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>52</Hsp_identity>
+      <Hsp_positive>83</Hsp_positive>
+      <Hsp_gaps>14</Hsp_gaps>
+      <Hsp_align-len>157</Hsp_align-len>
+      <Hsp_qseq>PLGMESGRIANEQISASST------YSDGRWTPQQSRLHGDDNG--WTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYR-HGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>PLGFESGEVTPDQITCSNPEQYVGWYSS--WTANKARLNSQGFGCAWLSKFQDSSQWLQIDLKEIKVISGILTQGHCDIDEWMTKYSVQYRTDERLN---WIYYKDQTGNNRVFYGNSDRTSTVQNLLRPPIISRFIRLIPLGWHVRIAIRMELLEC</Hsp_hseq>
+      <Hsp_midline>PLG ESG +  +QI+ S+       YS   WT  ++RL+    G  W      + ++LQ+DL+ + +++ I TQG    +     Y   Y+ +   N   W+ Y+    N++VF  N+D T  V N L  P+++RF+R+ P  WH  IA+R+EL  C</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>43</Hit_num>
+  <Hit_id>pdb|5Y4M|A</Hit_id>
+  <Hit_def>Chain A, human CASPR2 Disc domain [Homo sapiens]</Hit_def>
+  <Hit_accession>5Y4M_A</Hit_accession>
+  <Hit_len>154</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>73.9442</Hsp_bit-score>
+      <Hsp_score>180</Hsp_score>
+      <Hsp_evalue>6.1371e-17</Hsp_evalue>
+      <Hsp_query-from>42</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>40</Hsp_hit-from>
+      <Hsp_hit-to>152</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>62</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>117</Hsp_align-len>
+      <Hsp_qseq>GDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSG--IALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>GGAGGWSPSDSDHYQWLQVDFGNRKQISAIATQGRYSSSD----WVTQYRMLYSDTGRNWKPYHQDGNIWAFPGNINSDGVVRHELQHPIIARYVRIVPLDWNGEGRIGLRIEVYGC</Hsp_hseq>
+      <Hsp_midline>G   GW+P+   + ++LQVD      ++AIATQG  S       +V  Y++  S  G +W  Y    N   F  N ++  VV ++L  P++ R+VRI P  W+    I LR+E++GC</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>44</Hit_num>
+  <Hit_id>pdb|4AG4|A</Hit_id>
+  <Hit_def>Chain A, Epithelial Discoidin Domain-containing Receptor 1 [Homo sapiens]</Hit_def>
+  <Hit_accession>4AG4_A</Hit_accession>
+  <Hit_len>351</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>69.707</Hsp_bit-score>
+      <Hsp_score>169</Hsp_score>
+      <Hsp_evalue>2.72458e-14</Hsp_evalue>
+      <Hsp_query-from>44</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>45</Hsp_hit-from>
+      <Hsp_hit-to>160</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>60</Hsp_positive>
+      <Hsp_gaps>13</Hsp_gaps>
+      <Hsp_align-len>121</Hsp_align-len>
+      <Hsp_qseq>DNGWTPN---LDSNKEYLQVDLRFLTMLTAIATQG----AISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWH-SGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>DGAWCPAGSVFPKEEEYLQVDLQRLHLVALVGTQGRHAGGLGKE-----FSRSYRLRYSRDGRRWMGWKDRWGQEVISGNEDPEGVVLKDLGPPMVARLVRFYPRADRVMSVCLRVELYGC</Hsp_hseq>
+      <Hsp_midline>D  W P        +EYLQVDL+ L ++  + TQG     + +E     + +SY+L  S +G  WM ++     +V   N D   VVL  L  P++ R VR  P+      + LR+EL+GC</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>45</Hit_num>
+  <Hit_id>pdb|6BRJ|A</Hit_id>
+  <Hit_def>Chain A, Epithelial discoidin domain-containing receptor 1 [Homo sapiens] &gt;pdb|6BSD|A Chain A, Epithelial discoidin domain-containing receptor 1 [Homo sapiens]</Hit_def>
+  <Hit_accession>6BRJ_A</Hit_accession>
+  <Hit_len>876</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>69.707</Hsp_bit-score>
+      <Hsp_score>169</Hsp_score>
+      <Hsp_evalue>4.80485e-14</Hsp_evalue>
+      <Hsp_query-from>44</Hsp_query-from>
+      <Hsp_query-to>156</Hsp_query-to>
+      <Hsp_hit-from>70</Hsp_hit-from>
+      <Hsp_hit-to>185</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>40</Hsp_identity>
+      <Hsp_positive>60</Hsp_positive>
+      <Hsp_gaps>13</Hsp_gaps>
+      <Hsp_align-len>121</Hsp_align-len>
+      <Hsp_qseq>DNGWTPN---LDSNKEYLQVDLRFLTMLTAIATQG----AISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWH-SGIALRLELFGC</Hsp_qseq>
+      <Hsp_hseq>DGAWCPAGSVFPKEEEYLQVDLQRLHLVALVGTQGRHAGGLGKE-----FSRSYRLRYSRDGRRWMGWKDRWGQEVISGNEDPEGVVLKDLGPPMVARLVRFYPRADRVMSVCLRVELYGC</Hsp_hseq>
+      <Hsp_midline>D  W P        +EYLQVDL+ L ++  + TQG     + +E     + +SY+L  S +G  WM ++     +V   N D   VVL  L  P++ R VR  P+      + LR+EL+GC</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>46</Hit_num>
+  <Hit_id>pdb|2VM9|A</Hit_id>
+  <Hit_def>Chain A, Discoidin-2 [Dictyostelium discoideum AX2] &gt;pdb|2VMC|A Chain A, Discoidin-2 [Dictyostelium discoideum AX2] &gt;pdb|2VMD|A Chain A, Discoidin-2 [Dictyostelium discoideum AX2]</Hit_def>
+  <Hit_accession>2VM9_A</Hit_accession>
+  <Hit_len>257</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>55.0694</Hsp_bit-score>
+      <Hsp_score>131</Hsp_score>
+      <Hsp_evalue>3.02495e-09</Hsp_evalue>
+      <Hsp_query-from>34</Hsp_query-from>
+      <Hsp_query-to>162</Hsp_query-to>
+      <Hsp_hit-from>40</Hsp_hit-from>
+      <Hsp_hit-to>160</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>35</Hsp_identity>
+      <Hsp_positive>63</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>129</Hsp_align-len>
+      <Hsp_qseq>TPQQSRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTSGS</Hsp_qseq>
+      <Hsp_hseq>SKDASRFDGSE-SWSSSVLDKNQFIVAGSDSVKHFVAISTQG----RGDHDQWVTSYKLRYTLDNVNWVEYNNGE---IINANKDRNSIVTINFNPPIKARSIAIHPQTYNNHISLRWELYALPVKSYS</Hsp_hseq>
+      <Hsp_midline>+   SR  G +  W+ ++    +++      +    AI+TQG       +  +V SYKL  + +  +W+ Y +G+   +  AN D   +V    + P+  R + I PQT+++ I+LR EL+   V S S</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>47</Hit_num>
+  <Hit_id>pdb|2VME|A</Hit_id>
+  <Hit_def>Chain A, Discoidin-2 [Dictyostelium discoideum AX2] &gt;pdb|2VME|B Chain B, Discoidin-2 [Dictyostelium discoideum AX2] &gt;pdb|2VME|C Chain C, Discoidin-2 [Dictyostelium discoideum AX2] &gt;pdb|2VME|D Chain D, Discoidin-2 [Dictyostelium discoideum AX2] &gt;pdb|2VME|E Chain E, Discoidin-2 [Dictyostelium discoideum AX2] &gt;pdb|2VME|F Chain F, Discoidin-2 [Dictyostelium discoideum AX2]</Hit_def>
+  <Hit_accession>2VME_A</Hit_accession>
+  <Hit_len>257</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>55.0694</Hsp_bit-score>
+      <Hsp_score>131</Hsp_score>
+      <Hsp_evalue>3.6122e-09</Hsp_evalue>
+      <Hsp_query-from>38</Hsp_query-from>
+      <Hsp_query-to>162</Hsp_query-to>
+      <Hsp_hit-from>44</Hsp_hit-from>
+      <Hsp_hit-to>160</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>35</Hsp_identity>
+      <Hsp_positive>61</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>125</Hsp_align-len>
+      <Hsp_qseq>SRLHGDDNGWTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELFGCRVTSGS</Hsp_qseq>
+      <Hsp_hseq>SRFDGSE-SWSSSVLDKNQFIVAGSDSVKHFVAISTQG----RGDXDQWVTSYKLRYTLDNVNWVEYNNGE---IINANKDRNSIVTINFNPPIKARSIAIHPQTYNNHISLRWELYALPVKSYS</Hsp_hseq>
+      <Hsp_midline>SR  G +  W+ ++    +++      +    AI+TQG          +V SYKL  + +  +W+ Y +G+   +  AN D   +V    + P+  R + I PQT+++ I+LR EL+   V S S</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>48</Hit_num>
+  <Hit_id>pdb|2W94|A</Hit_id>
+  <Hit_def>Chain A, Native Structure Of The Discoidin I From Dictyostelium Discoideum At 1.8 Angstrom Resolution [Dictyostelium discoideum AX2] &gt;pdb|2W94|B Chain B, Native Structure Of The Discoidin I From Dictyostelium Discoideum At 1.8 Angstrom Resolution [Dictyostelium discoideum AX2] &gt;pdb|2W94|C Chain C, Native Structure Of The Discoidin I From Dictyostelium Discoideum At 1.8 Angstrom Resolution [Dictyostelium discoideum AX2] &gt;pdb|2W95|A Chain A, Structure Of The Discoidin I From Dictyostelium Discoideum In Complex With Galnac At 1.75 Angstrom Resolution [Dictyostelium discoideum AX2] &gt;pdb|2W95|B Chain B, Structure Of The Discoidin I From Dictyostelium Discoideum In Complex With Galnac At 1.75 Angstrom Resolution [Dictyostelium discoideum AX2] &gt;pdb|2W95|C Chain C, Structure Of The Discoidin I From Dictyostelium Discoideum In Complex With Galnac At 1.75 Angstrom Resolution [Dictyostelium discoideum AX2] &gt;pdb|2WN2|A Chain A, Structure Of The Discoidin I From Dictyostelium Discoideum In Complex With Galactose Beta 1-3 Galnac At 1.8 A Resolution. [Dictyostelium discoideum AX2] &gt;pdb|2WN2|B Chain B, Structure Of The Discoidin I From Dictyostelium Discoideum In Complex With Galactose Beta 1-3 Galnac At 1.8 A Resolution. [Dictyostelium discoideum AX2] &gt;pdb|2WN2|C Chain C, Structure Of The Discoidin I From Dictyostelium Discoideum In Complex With Galactose Beta 1-3 Galnac At 1.8 A Resolution. [Dictyostelium discoideum AX2] &gt;pdb|2WN3|A Chain A, Crystal Structure Of Discoidin I From Dictyostelium Discoideum In Complex With The Disaccharide Galnac Beta 1- 3 Galactose, At 1.6 A Resolution. [Dictyostelium discoideum AX2] &gt;pdb|2WN3|B Chain B, Crystal Structure Of Discoidin I From Dictyostelium Discoideum In Complex With The Disaccharide Galnac Beta 1- 3 Galactose, At 1.6 A Resolution. [Dictyostelium discoideum AX2] &gt;pdb|2WN3|C Chain C, Crystal Structure Of Discoidin I From Dictyostelium Discoideum In Complex With The Disaccharide Galnac Beta 1- 3 Galactose, At 1.6 A Resolution. [Dictyostelium discoideum AX2]</Hit_def>
+  <Hit_accession>2W94_A</Hit_accession>
+  <Hit_len>254</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>43.8986</Hsp_bit-score>
+      <Hsp_score>102</Hsp_score>
+      <Hsp_evalue>2.65475e-05</Hsp_evalue>
+      <Hsp_query-from>17</Hsp_query-from>
+      <Hsp_query-to>154</Hsp_query-to>
+      <Hsp_hit-from>11</Hsp_hit-from>
+      <Hsp_hit-to>151</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>38</Hsp_identity>
+      <Hsp_positive>59</Hsp_positive>
+      <Hsp_gaps>17</Hsp_gaps>
+      <Hsp_align-len>148</Hsp_align-len>
+      <Hsp_qseq>IANEQISA-SSTYSDGRWTPQQSRLHGDDNG---------WTPNLDSNKEYLQVDLRFLTMLTAIATQGAISRETQNGYYVKSYKLEVSTNGEDWMVYRHGKNHKVFQANNDATEVVLNKLHAPLLTRFVRIRPQTWHSGIALRLELF</Hsp_qseq>
+      <Hsp_hseq>LANAQCHLRTSTNYNGVHTQFNSALNYKNNGTNTIDGSEAWCSSIVDTNQYIVAGCEVPRTFMCVALQGRGDADQ----WVTSYKIRYSLDNVSWFEYRNGA---AVTGVTDRNTVVNHFFDTPIRARSIAIHPLTWNGHISLRCEFY</Hsp_hseq>
+      <Hsp_midline>+AN Q    +ST  +G  T   S L+  +NG         W  ++    +Y+            +A QG    +     +V SYK+  S +   W  YR+G          D   VV +    P+  R + I P TW+  I+LR E +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>49</Hit_num>
+  <Hit_id>pdb|1CFG|A</Hit_id>
+  <Hit_def>Chain A, COAGULATION FACTOR VIII [Homo sapiens]</Hit_def>
+  <Hit_accession>1CFG_A</Hit_accession>
+  <Hit_len>22</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>30.8018</Hsp_bit-score>
+      <Hsp_score>68</Hsp_score>
+      <Hsp_evalue>0.080733</Hsp_evalue>
+      <Hsp_query-from>133</Hsp_query-from>
+      <Hsp_query-to>154</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>22</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>12</Hsp_identity>
+      <Hsp_positive>17</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>22</Hsp_align-len>
+      <Hsp_qseq>TRFVRIRPQTWHSGIALRLELF</Hsp_qseq>
+      <Hsp_hseq>TRYLRIHPQSWVHQIALRMEVL</Hsp_hseq>
+      <Hsp_midline>TR++RI PQ+W   IALR+E+ </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>50</Hit_num>
+  <Hit_id>pdb|1FAC|A</Hit_id>
+  <Hit_def>Chain A, COAGULATION FACTOR VIII [Homo sapiens]</Hit_def>
+  <Hit_accession>1FAC_A</Hit_accession>
+  <Hit_len>21</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>30.4166</Hsp_bit-score>
+      <Hsp_score>67</Hsp_score>
+      <Hsp_evalue>0.10618</Hsp_evalue>
+      <Hsp_query-from>133</Hsp_query-from>
+      <Hsp_query-to>153</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>21</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>12</Hsp_identity>
+      <Hsp_positive>17</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>21</Hsp_align-len>
+      <Hsp_qseq>TRFVRIRPQTWHSGIALRLEL</Hsp_qseq>
+      <Hsp_hseq>TRYLRIHPQSWVHQIALRMEV</Hsp_hseq>
+      <Hsp_midline>TR++RI PQ+W   IALR+E+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>119992</Statistics_db-num>
+      <Statistics_db-len>31531979</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+<Iteration>
+  <Iteration_iter-num>2</Iteration_iter-num>
+  <Iteration_query-ID>Query_7589</Iteration_query-ID>
+  <Iteration_query-def>6TDB_2|Chains F,J,K|C-terminal VEGFB167 peptide|Homo sapiens (9606)</Iteration_query-def>
+  <Iteration_query-len>5</Iteration_query-len>
+<Iteration_hits>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>119992</Statistics_db-num>
+      <Statistics_db-len>31531979</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>
