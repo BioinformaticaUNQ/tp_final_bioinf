@@ -29,13 +29,16 @@ def fasta():
     print(fasta_string)
     result_handle = NCBIWWW.qblast("blastp", "pdb", fasta_string)
     blast = pdb_id + ".xml"
-    
+    with open(blast, "w") as out_handle:
+        out_handle.write(result_handle.read())
+
+    result_handle.close()
     blast_records = NCBIXML.parse(open(blast))
     print(blast_records)
     owd = os.getcwd()
     if not os.path.exists("./fasta"):
         os.mkdir("./fasta")
-    all_seq_fasta = "./fasta/"+p db_id+".fasta"
+    all_seq_fasta = "./fasta/"+pdb_id+".fasta"
     file = open(all_seq_fasta, "w")
     # for qresult in SearchIO.parse(pdb_id + ".xml", "blast-xml"):
     #     for hit in qresult.hits:
@@ -47,7 +50,7 @@ def fasta():
     #             #file.writelines(hsp.hit_string)
     #             file.writelines("\n")
 
-for blast_record in blast_records:
+    for blast_record in blast_records:
         for alignment in blast_record.alignments:
             file.writelines(">" + alignment.hit_id)
             file.writelines("\n")
