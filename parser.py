@@ -22,8 +22,8 @@ import matplotlib.pyplot as plt
 #                 file.writelines(sbjct_no_gaps)
 #                 file.writelines("\n")
 outputPath = "./fasta/6TDB_Alligned.fasta"
-# clustalomega_cline = ClustalOmegaCommandline(infile = "./fasta/6TDB.fasta", outfile = outputPath,force = true)
-# clustalomega_cline()
+clustalomega_cline = ClustalOmegaCommandline(infile = "./fasta/6TDB.fasta", outfile = outputPath,force = True)
+clustalomega_cline()
 raw_seqs =[]
 with open(outputPath, "r") as f:
     seqText = ""

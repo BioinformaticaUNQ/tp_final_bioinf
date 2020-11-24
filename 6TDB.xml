@@ -5,7 +5,7 @@
   <BlastOutput_version>BLASTP 2.11.0+</BlastOutput_version>
   <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
   <BlastOutput_db>pdb</BlastOutput_db>
-  <BlastOutput_query-ID>Query_7588</BlastOutput_query-ID>
+  <BlastOutput_query-ID>Query_58214</BlastOutput_query-ID>
   <BlastOutput_query-def>6TDB_1|Chains A,B,C,D|Neuropilin-2|Homo sapiens (9606)</BlastOutput_query-def>
   <BlastOutput_query-len>162</BlastOutput_query-len>
   <BlastOutput_param>
@@ -20,7 +20,7 @@
 <BlastOutput_iterations>
 <Iteration>
   <Iteration_iter-num>1</Iteration_iter-num>
-  <Iteration_query-ID>Query_7588</Iteration_query-ID>
+  <Iteration_query-ID>Query_58214</Iteration_query-ID>
   <Iteration_query-def>6TDB_1|Chains A,B,C,D|Neuropilin-2|Homo sapiens (9606)</Iteration_query-def>
   <Iteration_query-len>162</Iteration_query-len>
 <Iteration_hits>
@@ -1800,7 +1800,7 @@
 </Iteration>
 <Iteration>
   <Iteration_iter-num>2</Iteration_iter-num>
-  <Iteration_query-ID>Query_7589</Iteration_query-ID>
+  <Iteration_query-ID>Query_58215</Iteration_query-ID>
   <Iteration_query-def>6TDB_2|Chains F,J,K|C-terminal VEGFB167 peptide|Homo sapiens (9606)</Iteration_query-def>
   <Iteration_query-len>5</Iteration_query-len>
 <Iteration_hits>
