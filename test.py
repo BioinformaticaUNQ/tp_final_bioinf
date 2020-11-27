@@ -12,7 +12,7 @@ from PIL import Image,ImageTk
 
 root = Tk()
 root.title("TP FINAL")
-root.geometry("800x600")
+root.geometry("1920x1080")
 
 def fasta():
     print('Beginning file download with urllib2...')
@@ -31,7 +31,7 @@ def fasta():
     urllib.request.urlretrieve(url2, pdb_id + ".fasta")
     fasta_string = open(pdb_id + ".fasta").read()
     print(fasta_string)
-    result_handle = NCBIWWW.qblast("blastp", "pdb", fasta_string)
+    result_handle = NCBIWWW.qblast("blastp", "pdb", fasta_string.split('\n')[1],alignments=10,hitlist_size=10)
     blast = pdb_id + ".xml"
     with open(blast, "w") as out_handle:
         out_handle.write(result_handle.read())
@@ -44,7 +44,8 @@ def fasta():
         os.mkdir("./fasta")
     all_seq_fasta = "./fasta/"+pdb_id+".fasta"
     file = open(all_seq_fasta, "w")
-    file.writelines(fasta_string)
+    file.writelines(fasta_string.split('\n')[0] + '\n')
+    file.writelines(fasta_string.split('\n')[1] + '\n')
     for blast_record in blast_records:
         for alignment in blast_record.alignments:
             file.writelines(">" + alignment.hit_id)
@@ -72,7 +73,12 @@ def fasta():
 
     counts_mat = lm.alignment_to_matrix(seqs)
     counts_mat.head()
-    lm.Logo(counts_mat)
+    crp_logo = lm.Logo(counts_mat, font_name = 'Arial Rounded MT Bold')
+
+    # style using Axes methods
+    crp_logo.ax.set_ylabel("$-\Delta \Delta G$ (kcal/mol)", labelpad=-1)
+    crp_logo.ax.xaxis.set_ticks_position('none')
+    crp_logo.ax.xaxis.set_tick_params(pad=-1)
     plt.savefig(pdb_id + "_aln.png")
     load = Image.open(pdb_id + "_aln.png")
     render = ImageTk.PhotoImage(load)
@@ -90,13 +96,12 @@ def fasta():
     pymol.cmd.color('red', 'ss h')
     pymol.cmd.color('yellow', 'ss s')
     pymol.cmd.png("%s.png"%(pdb_id))
-    pymol.cmd.quit()
-
+    #pymol.cmd.quit()
     loadPymol = Image.open(pdb_id + ".png")
     renderPymol = ImageTk.PhotoImage(loadPymol)
     imgPymol = Label(root,image=renderPymol)
     imgPymol.image = renderPymol
-    imgPymol.place(x=0,y=80)
+    imgPymol.place(x=0,y=300)
             
 
 
