@@ -42,6 +42,7 @@ def generate_3structure(pdb_id):
     imgPymol.place(x=0,y=400)
 
 def generate_alignment_view(outputPath,pdb_id):
+    raw_seqs =[]
     with open(outputPath, "r") as f:
         seqText = ""
         for sq in f:
@@ -108,7 +109,6 @@ def fasta():
     outputPath = "./fasta/"+pdb_id+"_aln.fasta"
     clustalomega_cline = ClustalOmegaCommandline(infile = all_seq_fasta, outfile = outputPath,force = True)
     clustalomega_cline()
-    raw_seqs =[]
     
     generate_alignment_view(outputPath,pdb_id)
 
