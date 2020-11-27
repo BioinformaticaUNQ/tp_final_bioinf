@@ -2,10 +2,24 @@ from Bio.Blast import NCBIWWW, NCBIXML
 from Bio import SearchIO
 from Bio import SeqIO
 from Bio.Align.Applications import ClustalOmegaCommandline 
-import logomaker as lm
-import matplotlib.pyplot as plt
+from Bio.PDB import PDBParser
+from Bio.PDB.DSSP import DSSP
 
 
+p = PDBParser()
+structure = p.get_structure("6TDB", "./6TDB.pdb")
+model = structure[0]
+dssp = DSSP(model, "./6TDB.pdb")
+print(len(list(dssp.keys())))
+# DSSP data is accessed by a tuple (chain_id, res_id)
+for a_key in list(dssp.keys()):
+ 
+# (dssp index, amino acid, secondary structure, relative ASA, phi, psi,
+# NH_O_1_relidx, NH_O_1_energy, O_NH_1_relidx, O_NH_1_energy,
+# NH_O_2_relidx, NH_O_2_energy, O_NH_2_relidx, O_NH_2_energy)
+    if dssp[a_key][2] != '-':
+        print(dssp[a_key])
+    #print(dssp[a_key][2])
 
 # file = open("./fasta/6TDB.fasta", "w")
 
@@ -21,27 +35,27 @@ import matplotlib.pyplot as plt
 #                 sbjct_no_gaps = hsp.sbjct.replace("-","")
 #                 file.writelines(sbjct_no_gaps)
 #                 file.writelines("\n")
-outputPath = "./fasta/6TDB_Alligned.fasta"
-clustalomega_cline = ClustalOmegaCommandline(infile = "./fasta/6TDB.fasta", outfile = outputPath,force = True)
-clustalomega_cline()
-raw_seqs =[]
-with open(outputPath, "r") as f:
-    seqText = ""
-    for sq in f:
-        if '>' in sq:
-            if seqText != "":
-                raw_seqs.append(seqText)
-                seqText = "" 
-            raw_seqs.append(sq)
-        else:
-            seqText += sq
-seqs = [seq.strip() for seq in raw_seqs if ('#' not in seq) and ('>') not in seq]
+# outputPath = "./fasta/6TDB_Alligned.fasta"
+# clustalomega_cline = ClustalOmegaCommandline(infile = "./fasta/6TDB.fasta", outfile = outputPath,force = True)
+# clustalomega_cline()
+# raw_seqs =[]
+# with open(outputPath, "r") as f:
+#     seqText = ""
+#     for sq in f:
+#         if '>' in sq:
+#             if seqText != "":
+#                 raw_seqs.append(seqText)
+#                 seqText = "" 
+#             raw_seqs.append(sq)
+#         else:
+#             seqText += sq
+# seqs = [seq.strip() for seq in raw_seqs if ('#' not in seq) and ('>') not in seq]
 
-counts_mat = lm.alignment_to_matrix(seqs)
-counts_mat.head()
-lm.Logo(counts_mat)
-plt.savefig("test.png")
-plt.show()
+# counts_mat = lm.alignment_to_matrix(seqs)
+# counts_mat.head()
+# lm.Logo(counts_mat)
+# plt.savefig("test.png")
+# plt.show()
 
 # print the executable command
 #print(clustalomega_cline)
