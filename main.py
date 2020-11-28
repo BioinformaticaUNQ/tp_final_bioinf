@@ -166,4 +166,7 @@ myTextbox.pack()
 myButton = Button(root, text="Procesar", command = getPDB)
 myButton.pack(pady = (0,30))
 
+scrollbar = Scrollbar(root)
+scrollbar.pack(side = RIGHT, fill = Y)
+
 root.mainloop()
