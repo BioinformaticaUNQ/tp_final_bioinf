@@ -38,38 +38,42 @@ def getFASTA(pdb_id):
 def getSequencesFromPDB(pdb_id):
     fasta_string = open(pdb_id + ".fasta").read()
     sequences = []
-    counter = 0
+    data = []
+    index = 0
 
     for line in fasta_string.splitlines():
-        if(oddNumber(counter)):
+        if (oddNumber(index)):
             sequences.append(line)
-        counter += 1
+        else:
+            data.append(line)
+        index += 1
     
-    putNumberOfSequencesLabel(pdb_id, sequences)
+    numberOfSequences = len(sequences)
+    dataAndSequencesMap = dict(zip(data,sequences))
+
+    putNumberOfSequencesLabel(pdb_id, numberOfSequences, dataAndSequencesMap)
 
 def oddNumber(number):
     return number % 2 != 0
 
-def putNumberOfSequencesLabel(pdb_id, sequences):
-    if len(sequences) > 1:
-        numberOfSequenceLabel = Label(root, text = "El código " + pdb_id + " tiene " + str(len(sequences)) + " secuencias")
+def putNumberOfSequencesLabel(pdb_id, numberOfSequences, dataAndSequencesMap):
+    if (numberOfSequences > 1):
+        numberOfSequenceLabel = Label(root, text = "El código " + pdb_id + " tiene " + str(numberOfSequences) + " secuencias")
         numberOfSequenceLabel.pack(pady = 5)
     else:
         numberOfSequenceLabel = Label(root, text = "El código " + pdb_id + " tiene 1 sola secuencia")
         numberOfSequenceLabel.pack(pady = 5)
 
-    putSequencesLabelAndButtonsToChoose(pdb_id, sequences)
+    putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap)
 
-def putSequencesLabelAndButtonsToChoose(pdb_id, sequences):
+def putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap):
     selectSequenceLabel = Label(root, text="Seleccione la secuencia a procesar")
     selectSequenceLabel.pack()
+    for k, v in dataAndSequencesMap.items():
+        Button(root, text = v, command = lambda k = k, v = v : blast_query(pdb_id, k, v)).pack(pady = 5)
 
-    for sequence in sequences:
-        sequenceLabel = Button(root, text= sequence, command = lambda sequence = sequence : partial(blast_query(sequence, pdb_id)))
-        sequenceLabel.pack(pady = 5)
-
-def blast_query(sequence,pdb_id):
-    print("Eligio la secuencia " + sequence)
+def blast_query(pdb_id, data, sequence):
+    print("Eligio la secuencia " + sequence + " con data " + data)
     result_handle = NCBIWWW.qblast("blastp", "pdb", sequence, alignments=10,hitlist_size=10)
     blast = pdb_id + ".xml"
 
@@ -77,17 +81,17 @@ def blast_query(sequence,pdb_id):
         out_handle.write(result_handle.read())
 
     result_handle.close()
-    runClustal(pdb_id, blast)
+    runClustal(pdb_id, blast, sequence, data)
     
-def runClustal(pdb_id, blast):
+def runClustal(pdb_id, blast, sequence, data):
     blast_records = NCBIXML.parse(open(blast))
     if not os.path.exists("./fasta"):
         os.mkdir("./fasta")
     
     all_seq_fasta = "./fasta/"+pdb_id+".fasta"
     file = open(all_seq_fasta, "w")
-    file.writelines(fasta_string.split('\n')[0] + '\n')
-    file.writelines(fasta_string.split('\n')[1] + '\n')
+    file.writelines(data + '\n')
+    file.writelines(sequence + '\n')
 
     for blast_record in blast_records:
         for alignment in blast_record.alignments:
@@ -153,7 +157,7 @@ def generate_3structure(pdb_id):
     imgPymol.place(x=0,y=400)
     
 
-myLabel = Label(root, text="Ingresar codigo PDB")
+myLabel = Label(root, text="Ingresar código PDB")
 myLabel.pack()
 
 myTextbox = Entry(root, width=50)
