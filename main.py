@@ -11,6 +11,8 @@ import matplotlib.pyplot as plt
 import os
 from PIL import Image,ImageTk
 import tarfile
+import numpy as np
+from pandas import DataFrame
 
 root = Tk()
 root.title("TP FINAL")
@@ -165,20 +167,22 @@ def generate_alignment_view(outputPath,pdb_id):
             else:
                 seqText += sq
     seqs = [seq.strip() for seq in raw_seqs if ('#' not in seq) and ('>') not in seq]
-
+  
     counts_mat = lm.alignment_to_matrix(seqs)
-    counts_mat.head()
-    crp_logo = lm.Logo(counts_mat, font_name = 'Arial Rounded MT Bold')
+    counts_mat_list = np.array_split(counts_mat, 4)
+    
+    for df in counts_mat_list:
+        crp_logo = lm.Logo(df, font_name = 'Arial Rounded MT Bold')
 
-    # style using Axes methods
-    crp_logo.ax.xaxis.set_ticks_position('none')
-    crp_logo.ax.xaxis.set_tick_params(pad=-1)
-    plt.savefig(pdb_id + "_aln.png")
-    load = Image.open(pdb_id + "_aln.png")
-    render = ImageTk.PhotoImage(load)
-    img = Label(secondFrame,image=render)
-    img.image = render
-    img.pack(pady = (30, 0))
+        # style using Axes methods
+        crp_logo.ax.xaxis.set_ticks_position('none')
+        crp_logo.ax.xaxis.set_tick_params(pad=-1)
+        plt.savefig(pdb_id + "_aln.png")
+        load = Image.open(pdb_id + "_aln.png")
+        render = ImageTk.PhotoImage(load)
+        img = Label(secondFrame,image=render)
+        img.image = render
+        img.pack(pady = (30, 0))
 
 def generate_3structure(pdb_id):
     pymol.cmd.load(pdb_id + ".pdb", pdb_id)
