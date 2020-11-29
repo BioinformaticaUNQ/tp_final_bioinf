@@ -39,11 +39,15 @@ def getSequencesFromPDB(pdb_id):
     fasta_string = open(pdb_id + ".fasta").read()
     sequences = []
     data = []
+    rna = []
     index = 0
 
     for line in fasta_string.splitlines():
         if (oddNumber(index)):
-            sequences.append(line)
+            if not (isRNA(line)):
+                sequences.append(line)
+            else :
+                rna.append(line)
         else:
             data.append(line)
         index += 1
@@ -51,12 +55,15 @@ def getSequencesFromPDB(pdb_id):
     numberOfSequences = len(sequences)
     dataAndSequencesMap = dict(zip(data,sequences))
 
-    putNumberOfSequencesLabel(pdb_id, numberOfSequences, dataAndSequencesMap)
+    putNumberOfSequencesLabel(pdb_id, numberOfSequences, dataAndSequencesMap, rna)
+
+def isRNA(sequence):
+    return len("".join(dict.fromkeys(sequence))) == 4
 
 def oddNumber(number):
     return number % 2 != 0
 
-def putNumberOfSequencesLabel(pdb_id, numberOfSequences, dataAndSequencesMap):
+def putNumberOfSequencesLabel(pdb_id, numberOfSequences, dataAndSequencesMap, rna):
     if (numberOfSequences > 1):
         numberOfSequenceLabel = Label(root, text = "El código " + pdb_id + " tiene " + str(numberOfSequences) + " secuencias")
         numberOfSequenceLabel.pack(pady = 5)
@@ -64,13 +71,21 @@ def putNumberOfSequencesLabel(pdb_id, numberOfSequences, dataAndSequencesMap):
         numberOfSequenceLabel = Label(root, text = "El código " + pdb_id + " tiene 1 sola secuencia")
         numberOfSequenceLabel.pack(pady = 5)
 
-    putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap)
+    putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna)
 
-def putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap):
-    selectSequenceLabel = Label(root, text="Seleccione la secuencia a procesar")
+def putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna):
+    selectSequenceLabel = Label(root, text = "Seleccione la secuencia a procesar")
     selectSequenceLabel.pack()
+
     for k, v in dataAndSequencesMap.items():
         Button(root, text = v, command = lambda k = k, v = v : blast_query(pdb_id, k, v)).pack(pady = 5)
+
+    if len(rna) > 1:
+        rnaLabel = Label(root, text = "Se omitieron " + str(len(rna)) + " secuencias de RNA")
+        rnaLabel.pack(pady = (30,0))
+    elif len(rna) == 1:
+        rnaLabel = Label(root, text = "Se omitió 1 secuencia de RNA")
+        rnaLabel.pack(pady = (30,0))
 
 def blast_query(pdb_id, data, sequence):
     print("Eligio la secuencia " + sequence + " con data " + data)
