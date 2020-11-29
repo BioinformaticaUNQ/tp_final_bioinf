@@ -1,6 +1,7 @@
 from tkinter import *
-from tkinter import messagebox
+from tkinter import messagebox, ttk
 from Bio.Blast import NCBIWWW, NCBIXML
+from Bio.Blast.Applications import NcbiblastpCommandline
 from Bio import SearchIO
 import urllib.request
 import pymol
@@ -9,11 +10,39 @@ import logomaker as lm
 import matplotlib.pyplot as plt
 import os
 from PIL import Image,ImageTk
-from functools import partial
+import tarfile
 
 root = Tk()
 root.title("TP FINAL")
 root.geometry("1920x1080")
+
+#SCROLLBAR
+mainFrame = Frame(root)
+mainFrame.pack(fill = BOTH, expand = 1)
+myCanvas = Canvas(mainFrame)
+myCanvas.pack(side = LEFT, fill = BOTH, expand = 1)
+myScrollBar = ttk.Scrollbar(mainFrame, orient = VERTICAL, command = myCanvas.yview)
+myScrollBar.pack(side = RIGHT, fill = Y)
+myCanvas.configure(yscrollcommand = myScrollBar.set)
+myCanvas.bind('<Configure>', lambda e : myCanvas.configure(scrollregion = myCanvas.bbox("all")))
+secondFrame = Frame(myCanvas)
+myCanvas.create_window((0, 0), window = secondFrame, anchor = "nw")
+
+#DESCARGA BDD
+if not os.path.exists("./db"):
+        os.mkdir("./db")
+if not os.path.isfile("./db/pdbaa.pdb"):
+    url = "https://ftp.ncbi.nlm.nih.gov/blast/db/pdbaa.tar.gz"
+    try:
+        if not os.path.isfile("./db/db.tar.gz"):
+            print("Descargando base de datos...")
+            urllib.request.urlretrieve(url, "./db/db.tar.gz")
+        tar = tarfile.open("./db/db.tar.gz")
+        tar.extractall(path="./db")
+        tar.close()
+    except Exception as e:
+        messagebox.showerror("Error", "Hubo un error al obtener la base de datos pdb")
+        exit()
 
 def getPDB():
     pdb_id = str(myTextbox.get())
@@ -65,37 +94,35 @@ def oddNumber(number):
 
 def putNumberOfSequencesLabel(pdb_id, numberOfSequences, dataAndSequencesMap, rna):
     if (numberOfSequences > 1):
-        numberOfSequenceLabel = Label(root, text = "El código " + pdb_id + " tiene " + str(numberOfSequences) + " secuencias")
+        numberOfSequenceLabel = Label(secondFrame, text = "El código " + pdb_id + " tiene " + str(numberOfSequences) + " secuencias")
         numberOfSequenceLabel.pack(pady = 5)
     else:
-        numberOfSequenceLabel = Label(root, text = "El código " + pdb_id + " tiene 1 sola secuencia")
+        numberOfSequenceLabel = Label(secondFrame, text = "El código " + pdb_id + " tiene 1 sola secuencia")
         numberOfSequenceLabel.pack(pady = 5)
 
     putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna)
 
 def putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna):
-    selectSequenceLabel = Label(root, text = "Seleccione la secuencia a procesar")
+    selectSequenceLabel = Label(secondFrame, text = "Seleccione la secuencia a procesar")
     selectSequenceLabel.pack()
 
     for k, v in dataAndSequencesMap.items():
-        Button(root, text = v, command = lambda k = k, v = v : blast_query(pdb_id, k, v)).pack(pady = 5)
+        Button(secondFrame, text = v, command = lambda k = k, v = v : blast_query(pdb_id, k, v)).pack(pady = 5)
 
     if len(rna) > 1:
-        rnaLabel = Label(root, text = "Se omitieron " + str(len(rna)) + " secuencias de RNA")
-        rnaLabel.pack(pady = (30,0))
+        rnaLabel = Label(secondFrame, text = "Se omitieron " + str(len(rna)) + " secuencias de RNA")
+        rnaLabel.pack(pady = (30, 0))
     elif len(rna) == 1:
-        rnaLabel = Label(root, text = "Se omitió 1 secuencia de RNA")
-        rnaLabel.pack(pady = (30,0))
+        rnaLabel = Label(secondFrame, text = "Se omitió 1 secuencia de RNA")
+        rnaLabel.pack(pady = (30, 0))
 
 def blast_query(pdb_id, data, sequence):
-    print("Eligio la secuencia " + sequence + " con data " + data)
-    result_handle = NCBIWWW.qblast("blastp", "pdb", sequence, alignments=10,hitlist_size=10)
+    print("Eligio la secuencia " + sequence)    
     blast = pdb_id + ".xml"
-
-    with open(blast, "w") as out_handle:
-        out_handle.write(result_handle.read())
-
-    result_handle.close()
+    cline = NcbiblastpCommandline(query=pdb_id + '.fasta', db="./db/pdbaa",
+                              evalue=0.001, out=blast, outfmt=5,qcov_hsp_perc=80)
+    cline()
+    
     runClustal(pdb_id, blast, sequence, data)
     
 def runClustal(pdb_id, blast, sequence, data):
@@ -149,9 +176,9 @@ def generate_alignment_view(outputPath,pdb_id):
     plt.savefig(pdb_id + "_aln.png")
     load = Image.open(pdb_id + "_aln.png")
     render = ImageTk.PhotoImage(load)
-    img = Label(root,image=render)
+    img = Label(secondFrame,image=render)
     img.image = render
-    img.place(x=0,y=80)
+    img.pack(pady = (30, 0))
 
 def generate_3structure(pdb_id):
     pymol.cmd.load(pdb_id + ".pdb", pdb_id)
@@ -167,21 +194,17 @@ def generate_3structure(pdb_id):
     #pymol.cmd.quit()
     loadPymol = Image.open(pdb_id + ".png")
     renderPymol = ImageTk.PhotoImage(loadPymol)
-    imgPymol = Label(root,image=renderPymol)
+    imgPymol = Label(secondFrame,image=renderPymol)
     imgPymol.image = renderPymol
-    imgPymol.place(x=0,y=400)
-    
+    imgPymol.pack(pady = (15, 0))
 
-myLabel = Label(root, text="Ingresar código PDB")
+myLabel = Label(secondFrame, text="Ingresar código PDB")
 myLabel.pack()
 
-myTextbox = Entry(root, width=50)
+myTextbox = Entry(secondFrame, width=50)
 myTextbox.pack()
 
-myButton = Button(root, text="Procesar", command = getPDB)
-myButton.pack(pady = (0,30))
-
-scrollbar = Scrollbar(root)
-scrollbar.pack(side = RIGHT, fill = Y)
+myButton = Button(secondFrame, text="Procesar", command = getPDB)
+myButton.pack(pady = (0, 30))
 
 root.mainloop()
