@@ -16,7 +16,8 @@ from pandas import DataFrame
 
 root = Tk()
 root.title("TP FINAL")
-root.geometry("1920x1080")
+root.geometry("800x600")
+pdbs_to_process =[]
 
 #SCROLLBAR
 mainFrame = Frame(root)
@@ -155,11 +156,14 @@ def runClustal(pdb_id, blast, sequence, data):
     generate_3structure(pdb_id)
 
 def generate_alignment_view(outputPath,pdb_id):
+    pdbs = []
     raw_seqs =[]
     with open(outputPath, "r") as f:
         seqText = ""
         for sq in f:
             if '>' in sq:
+                if 'pdb' in sq:
+                    pdbs.append(sq.split("|")[1])
                 if seqText != "":
                     raw_seqs.append(seqText)
                     seqText = "" 
@@ -167,12 +171,14 @@ def generate_alignment_view(outputPath,pdb_id):
             else:
                 seqText += sq
     seqs = [seq.strip() for seq in raw_seqs if ('#' not in seq) and ('>') not in seq]
-  
+    pdbs.append(pdb_id)
+    pdbs_to_process.extend(pdbs[-10:])
+    
     counts_mat = lm.alignment_to_matrix(seqs)
     counts_mat_list = np.array_split(counts_mat, 4)
     
     for df in counts_mat_list:
-        crp_logo = lm.Logo(df, font_name = 'Arial Rounded MT Bold')
+        crp_logo = lm.Logo(df)
 
         # style using Axes methods
         crp_logo.ax.xaxis.set_ticks_position('none')
@@ -185,15 +191,21 @@ def generate_alignment_view(outputPath,pdb_id):
         img.pack(pady = (30, 0))
 
 def generate_3structure(pdb_id):
-    pymol.cmd.load(pdb_id + ".pdb", pdb_id)
+    print(pdbs_to_process)
+    pymol.cmd.fetch(' '.join(pdbs_to_process))
     pymol.cmd.disable("all")
-    pymol.cmd.enable(pdb_id)
+    
+    for pdb in pdbs_to_process:
+        pymol.cmd.enable(pdb)
     print(pymol.cmd.get_names())
     pymol.cmd.hide('all')
     pymol.cmd.show('cartoon')
     pymol.cmd.set('ray_opaque_background', 0)
-    pymol.cmd.color('red', 'ss h')
-    pymol.cmd.color('yellow', 'ss s')
+
+    for pdb in pdbs_to_process:
+        if pdb_id != pdb:
+            pymol.cmd.align(pdb_id,pdb)
+    #pymol.cmd.align(pdb_id,"2QQJ")
     pymol.cmd.png("%s.png"%(pdb_id))
     #pymol.cmd.quit()
     loadPymol = Image.open(pdb_id + ".png")
@@ -201,6 +213,9 @@ def generate_3structure(pdb_id):
     imgPymol = Label(secondFrame,image=renderPymol)
     imgPymol.image = renderPymol
     imgPymol.pack(pady = (15, 0))
+    myCanvas.update()
+    secondFrame.update()
+    myScrollBar.update()
 
 myLabel = Label(secondFrame, text="Ingresar código PDB")
 myLabel.pack()
