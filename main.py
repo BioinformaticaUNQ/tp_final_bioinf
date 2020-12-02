@@ -18,6 +18,9 @@ root = Tk()
 root.title("TP FINAL")
 root.geometry("1920x1080")
 
+evalue = DoubleVar(value=0.004)
+coverage = IntVar(value=80)
+
 #SCROLLBAR
 mainFrame = Frame(root)
 mainFrame.pack(fill = BOTH, expand = 1)
@@ -47,7 +50,7 @@ if not os.path.isfile("./db/pdbaa.pdb"):
         exit()
 
 def getPDB():
-    pdb_id = str(myTextbox.get())
+    pdb_id = str(pdbTextbox.get())
     url = "https://files.rcsb.org/download/"+ pdb_id +".pdb"
     try:
         urllib.request.urlretrieve(url, pdb_id + ".pdb")
@@ -119,10 +122,12 @@ def putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna):
         rnaLabel.pack(pady = (30, 0))
 
 def blast_query(pdb_id, data, sequence):
+    print(evalue.get())
+    print(coverage.get())
     print("Eligio la secuencia " + sequence)    
     blast = pdb_id + ".xml"
     cline = NcbiblastpCommandline(query=pdb_id + '.fasta', db="./db/pdbaa",
-                              evalue=0.001, out=blast, outfmt=5,qcov_hsp_perc=80)
+                              evalue=evalue.get(), out=blast, outfmt=5,qcov_hsp_perc=coverage.get())
     cline()
     
     runClustal(pdb_id, blast, sequence, data)
@@ -136,15 +141,19 @@ def runClustal(pdb_id, blast, sequence, data):
     file = open(all_seq_fasta, "w")
     file.writelines(data + '\n')
     file.writelines(sequence + '\n')
-
+    identity_perc = 40
     for blast_record in blast_records:
         for alignment in blast_record.alignments:
-            file.writelines(">" + alignment.hit_id)
-            file.writelines("\n")
-            for hsp in alignment.hsps:
-                sbjct_no_gaps = hsp.sbjct.replace("-","")
-                file.writelines(sbjct_no_gaps)
+            identity = alignment.hsps[0].identities
+            align_length = alignment.hsps[0].align_length
+            percentage =  identity / align_length * 100
+            if (percentage >= identity_perc):
+                file.writelines(">" + alignment.hit_id)
                 file.writelines("\n")
+                for hsp in alignment.hsps:
+                    sbjct_no_gaps = hsp.sbjct.replace("-","")
+                    file.writelines(sbjct_no_gaps)
+                    file.writelines("\n")
     
     file.close()
     outputPath = "./fasta/"+pdb_id+"_aln.fasta"
@@ -202,11 +211,23 @@ def generate_3structure(pdb_id):
     imgPymol.image = renderPymol
     imgPymol.pack(pady = (15, 0))
 
-myLabel = Label(secondFrame, text="Ingresar código PDB")
-myLabel.pack()
+pdbLabel = Label(secondFrame, text="Ingresar código PDB")
+pdbLabel.pack()
 
-myTextbox = Entry(secondFrame, width=50)
-myTextbox.pack()
+pdbTextbox = Entry(secondFrame, width=50)
+pdbTextbox.pack()
+
+evalueLabel = Label(secondFrame, text="eValue")
+evalueLabel.pack()
+
+evalueTextbox = Entry(secondFrame, width=25, textvariable=evalue)
+evalueTextbox.pack()
+
+coverageLabel = Label(secondFrame, text="coverage")
+coverageLabel.pack()
+
+coverageTextbox = Entry(secondFrame, width=25,textvariable=coverage)
+coverageTextbox.pack()
 
 myButton = Button(secondFrame, text="Procesar", command = getPDB)
 myButton.pack(pady = (0, 30))
