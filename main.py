@@ -192,20 +192,22 @@ def generate_alignment_view(outputPath,pdb_id):
 
 def generate_3structure(pdb_id):
     print(pdbs_to_process)
-    pymol.cmd.fetch(' '.join(pdbs_to_process))
-    pymol.cmd.disable("all")
-    
-    for pdb in pdbs_to_process:
-        pymol.cmd.enable(pdb)
+    pymol.cmd.fetch(' '.join(pdbs_to_process))    
+    # for pdb in pdbs_to_process:
+    #     pymol.cmd.enable(pdb)
+    pymol.cmd.alignto(pdb_id,object="all_to_" + pdb_id)
     print(pymol.cmd.get_names())
+    #pymol.cmd.disable("all")
+
     pymol.cmd.hide('all')
+    #pymol.cmd.enable("all_to_" + pdb_id)
     pymol.cmd.show('cartoon')
     pymol.cmd.set('ray_opaque_background', 0)
 
-    for pdb in pdbs_to_process:
-        if pdb_id != pdb:
-            pymol.cmd.align(pdb_id,pdb)
-    #pymol.cmd.align(pdb_id,"2QQJ")
+    # for pdb in pdbs_to_process:
+    #     if pdb_id != pdb:
+    #         pymol.cmd.align(pdb_id,pdb)
+    
     pymol.cmd.png("%s.png"%(pdb_id))
     #pymol.cmd.quit()
     loadPymol = Image.open(pdb_id + ".png")
