@@ -7,7 +7,7 @@
 - Clonar repositorio
 - Ejecutar en la carpeta root el comando: 
 ```
-conda env create --file envname.yml
+conda env create --file enviroment.yml
 ```
 - Activar el entorno ejecutando el comando: 
 ```
@@ -15,7 +15,7 @@ conda activate bioinf
 ```
 - Ejecutar el script con el comando: 
 ```
-python test.py
+python main.py
 ```
 
 ### [Cheatsheet conda](https://docs.conda.io/projects/conda/en/latest/_downloads/843d9e0198f2a193a3484886fa28163c/conda-cheatsheet.pdf)
