@@ -4,25 +4,40 @@ from Bio import SeqIO
 from Bio.Align.Applications import ClustalOmegaCommandline 
 from Bio.PDB import PDBParser
 from Bio.PDB.DSSP import DSSP
+from Bio.PDB.DSSP import dssp_dict_from_pdb_file
 
 
-p = PDBParser()
-structure = p.get_structure("6TDB", "./6TDB.pdb")
-model = structure[0]
-dssp = DSSP(model, "./6TDB.pdb")
-print(len(list(dssp.keys())))
-# DSSP data is accessed by a tuple (chain_id, res_id)
-for a_key in list(dssp.keys()):
+# p = PDBParser()
+# structure = p.get_structure("6TDB", "./6TDB.pdb")
+# model = structure[0]
+# dssp = DSSP(model, "./6TDB.pdb")
+# print(len(list(dssp.keys())))
+# # DSSP data is accessed by a tuple (chain_id, res_id)
+# for a_key in list(dssp.keys()):
  
 # (dssp index, amino acid, secondary structure, relative ASA, phi, psi,
 # NH_O_1_relidx, NH_O_1_energy, O_NH_1_relidx, O_NH_1_energy,
 # NH_O_2_relidx, NH_O_2_energy, O_NH_2_relidx, O_NH_2_energy)
-    if dssp[a_key][2] != '-':
-        print(dssp[a_key])
+    # if dssp[a_key][2] != '-':
+    #     print(dssp[a_key])
     #print(dssp[a_key][2])
 
 # file = open("./fasta/6TDB.fasta", "w")
-
+dssp_tuple = dssp_dict_from_pdb_file("6TDB.pdb")
+dssp_dict = dssp_tuple[0]
+#EL PRIMER VALOR DE LA TUPLA ES UN DICCIONARIO (TUPLA KEY, DATA DE LA ESTRUCTURA)
+#EL SEGUNDO VALOR ES LA LISTA DE KEYS QUE SON DEL FORMATO ("CADENA",('',NRO DE RESIDUO,''))
+#LAS CADENAS ESTAN SEPARADAS , POR EJ LA CADENA A SON MUCHAS KEYS TODAS EMPEZANDO CON A PERO CON DISTINTO NUMERO DE RESIDUO
+AChain = []
+for key in dssp_tuple[1]:
+    if(key[0] == 'A'):
+        #OBTENGO TODAS LAS KEYS DE LA CADENA A
+        AChain.append(key)
+for chainPart in AChain:
+    #OBTENGO LAS ESTRUCTURAS DE LA CADENA A
+    print(dssp_dict[chainPart][0])
+# print(dssp_dict[('A', (' ', 272, ' '))])
+# print(dssp_dict[('A', (' ', 273, ' '))])
 # blast_records = NCBIXML.parse(open("6TDB.xml"))
 # original = open("6TDB.fasta","r")
 # for line in original:
