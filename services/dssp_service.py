@@ -36,7 +36,7 @@ def generate_2structures(pdbs_to_process,output_path,pdb_id):
             else:
                 seq += dssp_dict[chainPart][0]
         secondary_map[pdb_file.split('/')[2].split('.')[0]] = seq
-    return generate_secondary_fasta(get_primary_map(pdb_id),output_path)
+    return generate_secondary_fasta(get_primary_map(pdb_id,output_path),output_path)
 
 
 def generate_secondary_fasta(primary_map, input_path):
@@ -58,9 +58,9 @@ def generate_secondary_fasta(primary_map, input_path):
     return input_path + '/secondaryFasta.fasta'
 
 
-def get_primary_map(pdb_id):
+def get_primary_map(pdb_id,input_path):
     seq_map = {}
-    with open("./fasta/"+pdb_id+"_aln.fasta", "r") as f:
+    with open(input_path + "/" + pdb_id + "_aln.fasta", "r") as f:
         seqText = ""
         key = ""
 

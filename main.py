@@ -14,7 +14,7 @@ import math
 #Configuracion de UI con scrollbars
 
 root = Tk()
-root.title("TP FINAL")
+root.title("Visualizador de regiones conservadas de estructuras homólogas a distintos niveles")
 root.geometry("800x600")
 pdbs_to_process =[]
 
@@ -45,11 +45,13 @@ if not os.path.isfile("./db/pdbaa.pdb"):
     try:
         if not os.path.isfile("./db/db.tar.gz"):
             print("Descargando base de datos...")
+            logging.info("Descargando base de datos...")
             urllib.request.urlretrieve(url, "./db/db.tar.gz")
         tar = tarfile.open("./db/db.tar.gz")
         tar.extractall(path="./db")
         tar.close()
     except Exception as e:
+        logging.info("Hubo un error al obtener la base de datos pdb")
         messagebox.showerror("Error", "Hubo un error al obtener la base de datos pdb")
         exit()
 
@@ -62,11 +64,15 @@ def getPDB():
     url = "https://files.rcsb.org/download/"+ pdb_id +".pdb"
     try:
         urllib.request.urlretrieve(url, pdb_id + ".pdb")
+        logging.info("Obtenido pdb de: " + url)
     except Exception as e:
+        logging.info(str(e))
         print(str(e))
         if(str(e) == "HTTP Error 404: Not Found"):
+            logging.info("Código pdb inválido")
             messagebox.showerror("Error", "Código pdb inválido")
         else:
+            logging.info("Hubo un error al obtener la proteína")
             messagebox.showerror("Error", "Hubo un error al obtener la proteína")
         return
 
@@ -76,6 +82,7 @@ def getPDB():
 def getFASTA(pdb_id,input_path):
     url2 = "https://www.rcsb.org/fasta/entry/"+pdb_id+"/download"
     urllib.request.urlretrieve(url2, pdb_id + ".fasta")
+    logging.info("Obtenido fasta de: " + url2)
     getSequencesFromPDB(pdb_id,input_path)
 
 def getSequencesFromPDB(pdb_id,input_path):
@@ -148,8 +155,8 @@ def blast_query(pdb_id, data, sequence,input_path):
     logging.info("Porcentaje de identidad: >40%")
     logging.info("Porcentaje de coverage: >" + str(coverage.get()))
     logging.info("eValue: " + str(evalue.get()))
-    logging.info("El resto de los valores son estandares de blastp") #Poner link de doc
-
+    logging.info("El resto de los valores son estandares de blastp")
+    logging.info("https://biopython.readthedocs.io/en/latest/chapter_blast.html")
     fasta_seq = blast_service.blastp_query(pdb_id,evalue.get(),coverage.get(),data,sequence)
     define_progress(25)
     align_and_generate_structures(pdb_id, fasta_seq, sequence, data,input_path)
@@ -158,6 +165,7 @@ def blast_query(pdb_id, data, sequence,input_path):
 def align_and_generate_structures(pdb_id, fasta_seq, sequence, data,input_path):
     logging.info("Se ejecuto un alineamiento multiple de la cadena problema junto con las proteinas homologas obtenidas previamente")
     logging.info("Esto se ejecuto con Clustal Omega, utilizando como parametro un archivo fasta con todas las cadenas y con el resto de valores por default")
+    logging.info("http://www.clustal.org/omega/")
     output_path = clustal_service.run_clustal(pdb_id,fasta_seq,input_path)
     define_progress(50)
     generate_alignment_view(output_path,pdb_id,input_path)
@@ -207,7 +215,7 @@ def generate_3structure(pdb_id,input_path):
 
     logging.info("Se corre Pymol con las proteínas: " + str(pdbs_to_process))
     logging.info("Se utilizan los comandos fetch , alignto y el formato cartoon para el gráfico")
-
+    logging.info("https://pymol.org/2/")
     pymol_service.generate_3structure_image(pdb_id,pdbs_to_process,input_path)
 
     logging.info("Se generó un espacio de trabajo Pymol en la carpeta: " + input_path)
