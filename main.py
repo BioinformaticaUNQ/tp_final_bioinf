@@ -16,6 +16,10 @@ import math
 root = Tk()
 root.title("Visualizador de regiones conservadas de estructuras homólogas a distintos niveles")
 root.geometry("800x600")
+
+def escape_full_screen():
+    root.attributes("-fullscreen", False)
+root.bind("<Escape>",escape_full_screen())
 pdbs_to_process =[]
 
 evalue = DoubleVar(value=0.004)
@@ -36,6 +40,8 @@ myCanvas.create_window((0, 0), window = secondFrame, anchor = "nw")
 
 progress_bar = ttk.Progressbar(secondFrame,orient=HORIZONTAL,maximum=100)
 search_label = Label(secondFrame,text="Por favor, espere...")
+btns = []
+lbls = []
 
 #Descarga base de datos PDB en la primera ejecucion
 if not os.path.exists("./db"):
@@ -120,27 +126,41 @@ def putNumberOfSequencesLabel(pdb_id, numberOfSequences, dataAndSequencesMap, rn
     else:
         numberOfSequenceLabel = Label(secondFrame, text = "El código " + pdb_id + " tiene 1 sola secuencia")
         numberOfSequenceLabel.pack(pady = 5)
-
+    lbls.append(numberOfSequenceLabel)
     putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna,input_path)
 
 def putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna,input_path):
     selectSequenceLabel = Label(secondFrame, text = "Seleccione la cadena a procesar")
+    lbls.append(selectSequenceLabel)
     selectSequenceLabel.pack()
 
     index = 0
+
+    for button in btns:
+        button.destroy()
+
+    for label in lbls:
+        label.destroy()
+
     for k, v in dataAndSequencesMap.items():
         index += 1
         chain_label = Label(secondFrame, text="Cadena " + str(index))
         seq_label = Label(secondFrame,text = v)
+        lbls.append(chain_label)
+        lbls.append(seq_label)
         chain_label.pack(pady = (30, 0))
         seq_label.pack(pady = (30, 0))
-        Button(secondFrame, text = "Ejecutar cadena "+str(index), command = lambda k = k, v = v : blast_query(pdb_id, k, v,input_path)).pack(pady = 5)
+        btn = Button(secondFrame, text = "Ejecutar cadena "+str(index), command = lambda k = k, v = v : blast_query(pdb_id, k, v,input_path))
+        btn.pack(pady = 5)
+        btns.append(btn)
 
     if len(rna) > 1:
         rnaLabel = Label(secondFrame, text = "Se omitieron " + str(len(rna)) + " secuencias de RNA")
+        lbls.append(rnaLabel)
         rnaLabel.pack(pady = (30, 0))
     elif len(rna) == 1:
         rnaLabel = Label(secondFrame, text = "Se omitió 1 secuencia de RNA")
+        lbls.append(rnaLabel)
         rnaLabel.pack(pady = (30, 0))
 
 #Busqueda de proteinas homologas con blastp
@@ -157,6 +177,12 @@ def blast_query(pdb_id, data, sequence,input_path):
     logging.info("eValue: " + str(evalue.get()))
     logging.info("El resto de los valores son estandares de blastp")
     logging.info("https://biopython.readthedocs.io/en/latest/chapter_blast.html")
+    if(coverage.get() < 0 or coverage.get() > 100):
+        messagebox.showerror("Error", "El pocentaje de coverage debe estar entre 0 y 100")
+        return
+    if(evalue.get() < 0 or evalue.get() > 0.5):
+        messagebox.showerror("Error", "El evalue esperado debe estar entre 0 y 0.5")
+        return
     fasta_seq = blast_service.blastp_query(pdb_id,evalue.get(),coverage.get(),data,sequence)
     define_progress(25)
     align_and_generate_structures(pdb_id, fasta_seq, sequence, data,input_path)
@@ -204,8 +230,8 @@ def generate_alignment_view(outputPath,pdb_id,input_path):
             else:
                 seqText += sq
     seqs2 = [seq.strip() for seq in raw_seqs2 if ('#' not in seq) and ('>') not in seq]
-    logomaker_service.primary_structure_conservation(seqs,pdb_id,secondFrame,logging)
-    logomaker_service.secondary_structure_conservation(seqs2,pdb_id,secondFrame,logging)
+    logomaker_service.primary_structure_conservation(seqs,pdb_id,secondFrame,logging,lbls)
+    logomaker_service.secondary_structure_conservation(seqs2,pdb_id,secondFrame,logging,lbls)
     define_progress(75)
 
 
@@ -222,17 +248,22 @@ def generate_3structure(pdb_id,input_path):
     logging.info("Puede utilizarlo para ver en detalle las estructuras alineadas")
 
     pymol_label = Label(secondFrame,text="Alineamiento de estructuras terciarias. Para verlo en detalle abrir el archivo .pse en la carpeta de la ejecucion actual.")
+    lbls.append(pymol_label)
     pymol_label.pack(pady=(0,30))
     loadPymol = Image.open(input_path + "/" + pdb_id + ".png")
     renderPymol = ImageTk.PhotoImage(loadPymol)
     imgPymol = Label(secondFrame,image=renderPymol)
+    lbls.append(imgPymol)
     imgPymol.image = renderPymol
     imgPymol.pack(pady = (15, 0)) 
 
     #Finalizacion de la busqueda
     delete_unused_files(input_path)
     search_label.config(text="Búsqueda finalizada")
+    lbls.append(search_label)
+    lbls.append(progress_bar)
     progress_bar.stop()
+    progress_bar.step(100)
 
 #Actualiza la progressbar al valor indicado
 def define_progress(value):
