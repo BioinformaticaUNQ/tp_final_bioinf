@@ -87,7 +87,7 @@ def getPDB():
 #Descarga fasta del pdb ingresado
 def getFASTA(pdb_id,input_path):
     url2 = "https://www.rcsb.org/fasta/entry/"+pdb_id+"/download"
-    urllib.request.urlretrieve(url2, pdb_id + ".fasta")
+    urllib.request.urlretrieve(url2, input_path + "/" + pdb_id + ".fasta")
     logging.info("Obtenido fasta de: " + url2)
     getSequencesFromPDB(pdb_id,input_path)
 
@@ -183,7 +183,7 @@ def blast_query(pdb_id, data, sequence,input_path):
     if(evalue.get() < 0 or evalue.get() > 0.5):
         messagebox.showerror("Error", "El evalue esperado debe estar entre 0 y 0.5")
         return
-    fasta_seq = blast_service.blastp_query(pdb_id,evalue.get(),coverage.get(),data,sequence)
+    fasta_seq = blast_service.blastp_query(pdb_id,evalue.get(),coverage.get(),data,sequence,input_path)
     define_progress(25)
     align_and_generate_structures(pdb_id, fasta_seq, sequence, data,input_path)
     
@@ -206,8 +206,10 @@ def generate_alignment_view(outputPath,pdb_id,input_path):
         seqText = ""
         for sq in f:
             if '>' in sq:
-                if 'pdb' in sq:
-                    pdbs.append(sq.split("|")[1])
+                if pdb_id not in sq:
+                    for pdb in sq.split(">"):
+                        if(pdb.split(" ")[0].split("_")[0] != ""):
+                            pdbs.append(pdb.split(" ")[0].split("_")[0])
                 if seqText != "":
                     raw_seqs.append(seqText)
                     seqText = "" 
@@ -215,8 +217,9 @@ def generate_alignment_view(outputPath,pdb_id,input_path):
             else:
                 seqText += sq
     seqs = [seq.strip() for seq in raw_seqs if ('#' not in seq) and ('>') not in seq]
-    pdbs.append(pdb_id)
-    pdbs_to_process.extend(pdbs[-10:])
+    pdbs_set = list(set(pdbs))
+    pdbs_set.append(pdb_id)
+    pdbs_to_process.extend(pdbs_set[-10:])
     second_structure_fasta = dssp_service.generate_2structures(pdbs_to_process,input_path,pdb_id)
     raw_seqs2 =[]
     with open(second_structure_fasta, "r") as f:
@@ -280,7 +283,7 @@ def delete_unused_files(input_path):
             os.remove(os.path.join("./",file))  
     files = os.listdir(input_path)
     for file in files:
-        if(file.endswith(".pdb") or file.endswith(".png")):
+        if(file.endswith(".pdb")):
             os.remove(os.path.join(input_path,file)) 
 
 

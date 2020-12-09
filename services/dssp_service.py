@@ -23,19 +23,24 @@ def generate_2structures(pdbs_to_process,output_path,pdb_id):
         #EL PRIMER VALOR DE LA TUPLA ES UN DICCIONARIO (TUPLA KEY, DATA DE LA ESTRUCTURA)
         #EL SEGUNDO VALOR ES LA LISTA DE KEYS QUE SON DEL FORMATO ("CADENA",('',NRO DE RESIDUO,''))
         #LAS CADENAS ESTAN SEPARADAS , POR EJ LA CADENA A SON MUCHAS KEYS TODAS EMPEZANDO CON A PERO CON DISTINTO NUMERO DE RESIDUO
-        AChain = []
+        chain_map = {}
         for key in dssp_tuple[1]:
-            if(key[0] == 'A'):
-                #OBTENGO TODAS LAS KEYS DE LA CADENA A
-                AChain.append(key)
-        seq = ""
-        for chainPart in AChain:
-            #OBTENGO LAS ESTRUCTURAS DE LA CADENA A
-            if(dssp_dict[chainPart][0] == 'a'):
-                seq += 'C'
+            if(key[0] in chain_map.keys()):
+                chain_map[key[0]].append(key)
             else:
-                seq += dssp_dict[chainPart][0]
-        secondary_map[pdb_file.split('/')[2].split('.')[0]] = seq
+                chain_map[key[0]] = [key]
+
+        for chain,keys in chain_map.items():
+            seq = ""
+            for chainPart in keys:
+                #OBTENGO LAS ESTRUCTURAS DE LA CADENA A
+                if(dssp_dict[chainPart][0] == 'a'):
+                    seq += 'C'
+                else:
+                    seq += dssp_dict[chainPart][0]
+            pdb_name = pdb_file.split('/')[2].split('.')[0] + "_" + chain
+            secondary_map[pdb_name] = seq
+
     return generate_secondary_fasta(get_primary_map(pdb_id,output_path),output_path)
 
 
@@ -62,23 +67,32 @@ def get_primary_map(pdb_id,input_path):
     seq_map = {}
     with open(input_path + "/" + pdb_id + "_aln.fasta", "r") as f:
         seqText = ""
-        key = ""
+        keys = []
 
         for sq in f:
             if '>' in sq:
                 if seqText != "":
-                    seq_map[key] = seqText
-                    seqText = "" 
+                    for key in keys:
+                        seq_map[key] = seqText
+                    seqText = ""
+                    keys = []
                 if pdb_id not in sq:
-                    seq_map[sq.split("|")[1]] = ''
-                    key = sq.split("|")[1]
+                    for pdb in sq.split(">"):
+                        seq_map[pdb.split(" ")[0]] = ''
+                        keys.append(pdb.split(" ")[0])
                 else:
-                    seq_map[pdb_id] = ''
-                    key = pdb_id
+                    for pdb in sq.split(">"):
+                        if(pdb != ""):
+                            chains = pdb.split("|")[1]
+                            chain_letters = chains.split(" ")[1].split(",")
+                            for letter in chain_letters:
+                                seq_map[pdb_id + "_" + letter] = ''
+                                keys.append(pdb_id + "_" + letter)
 
             else:
                 seqText += sq.replace('\n',"")
-        seq_map[key] = seqText
+        for key in keys:
+            seq_map[key] = seqText
     return seq_map
 
 def compare_chains(primary_chain, secondary_chain):
