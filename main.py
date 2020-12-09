@@ -17,9 +17,9 @@ root = Tk()
 root.title("Visualizador de regiones conservadas de estructuras homólogas a distintos niveles")
 root.geometry("800x600")
 
-def escape_full_screen():
+def escape_full_screen(event):
     root.attributes("-fullscreen", False)
-root.bind("<Escape>",escape_full_screen())
+root.bind("<Escape>",escape_full_screen)
 pdbs_to_process =[]
 
 evalue = DoubleVar(value=0.004)
@@ -233,8 +233,8 @@ def generate_alignment_view(outputPath,pdb_id,input_path):
             else:
                 seqText += sq
     seqs2 = [seq.strip() for seq in raw_seqs2 if ('#' not in seq) and ('>') not in seq]
-    logomaker_service.primary_structure_conservation(seqs,pdb_id,secondFrame,logging,lbls)
-    logomaker_service.secondary_structure_conservation(seqs2,pdb_id,secondFrame,logging,lbls)
+    logomaker_service.primary_structure_conservation(seqs,pdb_id,secondFrame,logging,lbls,input_path)
+    logomaker_service.secondary_structure_conservation(seqs2,pdb_id,secondFrame,logging,lbls,input_path)
     define_progress(75)
 
 
@@ -268,8 +268,8 @@ def generate_3structure(pdb_id,input_path):
     #Finalizacion de la busqueda
     delete_unused_files(input_path)
     search_label.config(text="Búsqueda finalizada")
-    lbls.append(search_label)
-    lbls.append(progress_bar)
+    search_label.pack_forget()
+    progress_bar.pack_forget()
     progress_bar.stop()
     progress_bar.step(100)
 
