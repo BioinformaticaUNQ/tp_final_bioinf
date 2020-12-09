@@ -14,9 +14,10 @@ def primary_structure_conservation(seqs,pdb_id,frame,logger,lbls):
     logger.info("Se utiliza el color scheme skylign_protein")
     logger.info("https://academic.oup.com/bioinformatics/article/36/7/2272/5671693")
     counts_mat_list = np.array_split(counts_mat, math.ceil(divider))
-    alignment_label = Label(frame,text="Alineamiento de estructura primaria")
+    alignment_label = Label(frame,text="Alineamiento de estructura primaria: ")
+    alignment_label.config(font=("Verdana",20))
     lbls.append(alignment_label)
-    alignment_label.pack(pady=(0,30))
+    alignment_label.pack(anchor=CENTER)
     for df in counts_mat_list:
         crp_logo = lm.Logo(df,color_scheme='skylign_protein')
         # style using Axes methods
@@ -28,8 +29,7 @@ def primary_structure_conservation(seqs,pdb_id,frame,logger,lbls):
         img = Label(frame,image=render)
         lbls.append(img)
         img.image = render
-        img.pack(pady = (30, 0))
-
+        img.pack(pady = (50, 0))
 
 def secondary_structure_conservation(seqs2,pdb_id,frame,logger,lbls):
     counts_mat2 = lm.alignment_to_matrix(seqs2)
@@ -39,7 +39,8 @@ def secondary_structure_conservation(seqs2,pdb_id,frame,logger,lbls):
     logger.info("https://academic.oup.com/bioinformatics/article/36/7/2272/5671693")
 
     counts_mat_list2 = np.array_split(counts_mat2, math.ceil(divider2))
-    alignment_label2 = Label(frame,text="Alineamiento de estructura secundaria")
+    alignment_label2 = Label(frame,text="Alineamiento de estructura secundaria: ")
+    alignment_label2.config(font=("Verdana",20))
     lbls.append(alignment_label2)
     alignment_label2.pack(pady=(0,30))
     for df in counts_mat_list2:

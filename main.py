@@ -250,15 +250,20 @@ def generate_3structure(pdb_id,input_path):
     logging.info("Se generó un espacio de trabajo Pymol en la carpeta: " + input_path)
     logging.info("Puede utilizarlo para ver en detalle las estructuras alineadas")
 
-    pymol_label = Label(secondFrame,text="Alineamiento de estructuras terciarias. Para verlo en detalle abrir el archivo .pse en la carpeta de la ejecucion actual.")
+    pymol_label = Label(secondFrame,text="Alineamiento de estructura terciaria: ")
+    pymol_label.config(font=("Verdana",20))
+    pymol_label_pse = Label(secondFrame,text="(Para verlo en detalle abrir el archivo .pse, guardado en la carpeta de ejecucion actual, con Pymol)")
+    pymol_label_pse.config(font=("Verdana",15))
     lbls.append(pymol_label)
-    pymol_label.pack(pady=(0,30))
+    lbls.append(pymol_label_pse)
+    pymol_label.pack(anchor=CENTER)
+    pymol_label_pse.pack(anchor=CENTER)
     loadPymol = Image.open(input_path + "/" + pdb_id + ".png")
     renderPymol = ImageTk.PhotoImage(loadPymol)
     imgPymol = Label(secondFrame,image=renderPymol)
     lbls.append(imgPymol)
     imgPymol.image = renderPymol
-    imgPymol.pack(pady = (15, 0)) 
+    imgPymol.pack(anchor=CENTER) 
 
     #Finalizacion de la busqueda
     delete_unused_files(input_path)
@@ -289,25 +294,33 @@ def delete_unused_files(input_path):
 
 #UI principal
 
-pdbLabel = Label(secondFrame, text="Ingresar código PDB")
-pdbLabel.pack()
+titleLabel = Label(secondFrame, text="Visualizador de regiones conservadas de estructuras homólogas a distintos niveles")
+titleLabel.pack(anchor=CENTER)
+titleLabel.config(font=("Verdana",25)) 
 
-pdbTextbox = Entry(secondFrame, width=50)
+pdbLabel = Label(secondFrame, text="Ingrese un código PDB: ")
+pdbLabel.pack(anchor=CENTER)
+pdbLabel.config(font=("Verdana",15))
+
+pdbTextbox = Entry(secondFrame, width=30)
 pdbTextbox.pack()
 
-evalueLabel = Label(secondFrame, text="eValue")
-evalueLabel.pack()
+evalueLabel = Label(secondFrame, text="eValue: ")
+evalueLabel.pack(anchor=CENTER)
+evalueLabel.config(font=("Verdana",15))
 
-evalueTextbox = Entry(secondFrame, width=25, textvariable=evalue)
+evalueTextbox = Entry(secondFrame, width=30, textvariable=evalue)
 evalueTextbox.pack()
 
-coverageLabel = Label(secondFrame, text="coverage")
-coverageLabel.pack()
+coverageLabel = Label(secondFrame, text="Coverage: ")
+coverageLabel.pack(anchor=CENTER)
+coverageLabel.config(font=("Verdana",15))
 
-coverageTextbox = Entry(secondFrame, width=25,textvariable=coverage)
+coverageTextbox = Entry(secondFrame, width=30,textvariable=coverage)
 coverageTextbox.pack()
 
 myButton = Button(secondFrame, text="Procesar", command = getPDB)
-myButton.pack(pady = (0, 30))
+myButton.pack(anchor=CENTER)
+#myButton.pack(pady = (0, 30))
 
 root.mainloop()
