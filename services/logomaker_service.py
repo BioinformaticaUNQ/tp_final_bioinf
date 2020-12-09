@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from PIL import Image,ImageTk
 import logging
 
-def primary_structure_conservation(seqs,pdb_id,frame,logger,lbls):
+def primary_structure_conservation(seqs,pdb_id,frame,logger,lbls,input_path):
     counts_mat = lm.alignment_to_matrix(seqs)
     divider = len(seqs[0]) / 35
     logger.info("Se divide las cadenas de las estructuras primarias en " + str(math.ceil(divider)) + " partes para la generacion de graficos con LogoMaker")
@@ -23,15 +23,15 @@ def primary_structure_conservation(seqs,pdb_id,frame,logger,lbls):
         # style using Axes methods
         crp_logo.ax.xaxis.set_ticks_position('none')
         crp_logo.ax.xaxis.set_tick_params(pad=-1)
-        plt.savefig( pdb_id + "_aln.png")
-        load = Image.open(pdb_id + "_aln.png")
+        plt.savefig(input_path + "/" + pdb_id + "_aln.png")
+        load = Image.open(input_path + "/" + pdb_id + "_aln.png")
         render = ImageTk.PhotoImage(load)
         img = Label(frame,image=render)
         lbls.append(img)
         img.image = render
         img.pack(pady = (50, 0))
 
-def secondary_structure_conservation(seqs2,pdb_id,frame,logger,lbls):
+def secondary_structure_conservation(seqs2,pdb_id,frame,logger,lbls,input_path):
     counts_mat2 = lm.alignment_to_matrix(seqs2)
     divider2= len(seqs2[0]) / 40
     logger.info("Se divide las cadenas de las estructuras secundarias en " + str(math.ceil(divider2)) + " partes para la generacion de graficos con LogoMaker")
@@ -48,8 +48,8 @@ def secondary_structure_conservation(seqs2,pdb_id,frame,logger,lbls):
         # style using Axes methods
         crp_logo.ax.xaxis.set_ticks_position('none')
         crp_logo.ax.xaxis.set_tick_params(pad=-1)
-        plt.savefig(pdb_id + "_aln_secondary.png")
-        load = Image.open(pdb_id + "_aln_secondary.png")
+        plt.savefig(input_path + "/" + pdb_id + "_aln_secondary.png")
+        load = Image.open(input_path + "/" + pdb_id + "_aln_secondary.png")
         render = ImageTk.PhotoImage(load)
         img = Label(frame,image=render)
         lbls.append(img)
