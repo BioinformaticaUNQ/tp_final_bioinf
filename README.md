@@ -36,6 +36,8 @@ python main.py
 
 7. Dentro de la carpeta "ejecucion-{fecha y hora de la misma}" se encuentran los logs indicando cada proceso realizado, un workspace de pymol para observar con mayor detalle el alineamiento y el alineamiento que produce clustal.
 
+8. Abrir el archivo pse de pymol con una version igual o arriba de 2.4 (https://pymol.org/2/).
+
 
 ### Known Issues
 - Scrollbar: Se requiere maximizar/minimizar la ventana para que se muestre.
