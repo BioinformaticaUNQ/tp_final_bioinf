@@ -92,7 +92,7 @@ def getFASTA(pdb_id,input_path):
     getSequencesFromPDB(pdb_id,input_path)
 
 def getSequencesFromPDB(pdb_id,input_path):
-    fasta_string = open(pdb_id + ".fasta").read()
+    fasta_string = open(input_path + "/" + pdb_id + ".fasta").read()
     sequences = []
     data = []
     rna = []

@@ -5,14 +5,14 @@ import os
 
 def blastp_query(pdb_id,evalue,coverage,data,sequence,input_path):
     blast = pdb_id + ".xml"
-    cline = NcbiblastpCommandline(query=pdb_id + '.fasta', db="./db/pdbaa",
+    cline = NcbiblastpCommandline(query=input_path + "/" + pdb_id + '.fasta', db="./db/pdbaa",
                               evalue=evalue, out=blast, outfmt=5,qcov_hsp_perc=coverage)
     cline()
     blast_records = NCBIXML.parse(open(blast))
     if not os.path.exists("./fasta"):
         os.mkdir("./fasta")
     
-    all_seq_fasta = input_path+"/"+pdb_id+"_blastp.fasta"
+    all_seq_fasta = input_path + "/" + pdb_id + "_blastp.fasta"
 
     pdbs_to_process = []
     identity_perc = 40
