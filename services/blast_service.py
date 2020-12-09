@@ -36,10 +36,12 @@ def blastp_query(pdb_id,evalue,coverage,data,sequence,input_path):
         )
     
     os.system(get_complete_seqs)
-    file = open(all_seq_fasta, "a")
 
-    with open(input_path + "/" + pdb_id + ".fasta", "r") as f:    
-        for line in f:
-            file.writelines(line)
-    file.close()
+    if pdb_id not in pdbs_to_process:
+        file = open(all_seq_fasta, "a")
+
+        with open(input_path + "/" + pdb_id + ".fasta", "r") as f:    
+            for line in f:
+                file.writelines(line)
+        file.close()
     return all_seq_fasta

@@ -3,6 +3,8 @@ from Bio.PDB.DSSP import DSSP
 from Bio.PDB.DSSP import dssp_dict_from_pdb_file
 import urllib.request
 import os
+from Bio import SeqIO
+
 
 secondary_map = {}
 
@@ -65,34 +67,10 @@ def generate_secondary_fasta(primary_map, input_path):
 
 def get_primary_map(pdb_id,input_path):
     seq_map = {}
-    with open(input_path + "/" + pdb_id + "_aln.fasta", "r") as f:
-        seqText = ""
-        keys = []
+    records = list(SeqIO.parse(input_path + "/"+pdb_id+"_aln.fasta","fasta"))
+    for sequence in records:
+        seq_map[sequence.id] = sequence.seq
 
-        for sq in f:
-            if '>' in sq:
-                if seqText != "":
-                    for key in keys:
-                        seq_map[key] = seqText
-                    seqText = ""
-                    keys = []
-                if pdb_id not in sq:
-                    for pdb in sq.split(">"):
-                        seq_map[pdb.split(" ")[0]] = ''
-                        keys.append(pdb.split(" ")[0])
-                else:
-                    for pdb in sq.split(">"):
-                        if(pdb != ""):
-                            chains = pdb.split("|")[1]
-                            chain_letters = chains.split(" ")[1].split(",")
-                            for letter in chain_letters:
-                                seq_map[pdb_id + "_" + letter] = ''
-                                keys.append(pdb_id + "_" + letter)
-
-            else:
-                seqText += sq.replace('\n',"")
-        for key in keys:
-            seq_map[key] = seqText
     return seq_map
 
 def compare_chains(primary_chain, secondary_chain):
