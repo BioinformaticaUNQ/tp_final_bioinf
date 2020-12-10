@@ -69,9 +69,12 @@ def get_primary_map(pdb_id,input_path):
     seq_map = {}
     records = list(SeqIO.parse(input_path + "/"+pdb_id+"_aln.fasta","fasta"))
     for sequence in records:
+        print(sequence.id)
         seq_map[sequence.id] = sequence.seq
 
+    print(seq_map)
     return seq_map
+
 
 def compare_chains(primary_chain, secondary_chain):
     result = ''

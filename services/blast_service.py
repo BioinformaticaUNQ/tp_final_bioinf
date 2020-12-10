@@ -42,6 +42,15 @@ def blastp_query(pdb_id,evalue,coverage,data,sequence,input_path):
 
         with open(input_path + "/" + pdb_id + ".fasta", "r") as f:    
             for line in f:
-                file.writelines(line)
+                if '>' in line:
+                    newLine = ""
+                    id = line.split('>')[1].split('_')[0]
+                    chains = line.split("|")[1]
+                    chain_letters = chains.split(" ")[1].split(",")
+                    for letter in chain_letters:
+                        newLine += ">"+id+"_"+letter + " "
+                    file.writelines(newLine + "\n")
+                else:
+                    file.writelines(line)
         file.close()
     return all_seq_fasta
