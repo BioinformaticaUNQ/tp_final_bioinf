@@ -82,7 +82,15 @@ def getPDB():
             messagebox.showerror("Error", "Hubo un error al obtener la proteína")
         return
 
+    resetGUI()
     getFASTA(pdb_id,input_path)
+
+def resetGUI():
+    for button in btns:
+        button.destroy()
+
+    for label in lbls:
+        label.destroy()
 
 #Descarga fasta del pdb ingresado
 def getFASTA(pdb_id,input_path):
@@ -122,25 +130,20 @@ def oddNumber(number):
 def putNumberOfSequencesLabel(pdb_id, numberOfSequences, dataAndSequencesMap, rna,input_path):
     if (numberOfSequences > 1):
         numberOfSequenceLabel = Label(secondFrame, text = "El código " + pdb_id + " tiene " + str(numberOfSequences) + " secuencias")
-        numberOfSequenceLabel.pack(pady = 5)
+        numberOfSequenceLabel.pack(pady = (0, 15))
     else:
         numberOfSequenceLabel = Label(secondFrame, text = "El código " + pdb_id + " tiene 1 sola secuencia")
-        numberOfSequenceLabel.pack(pady = 5)
+        numberOfSequenceLabel.pack(pady = (0, 15))
     lbls.append(numberOfSequenceLabel)
     putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna,input_path)
 
 def putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna,input_path):
-    selectSequenceLabel = Label(secondFrame, text = "Seleccione la cadena a procesar")
+    selectSequenceLabel = Label(secondFrame, text = "Cadenas")
+    selectSequenceLabel.config(font=("Courier", 20))
     lbls.append(selectSequenceLabel)
     selectSequenceLabel.pack()
 
     index = 0
-
-    for button in btns:
-        button.destroy()
-
-    for label in lbls:
-        label.destroy()
 
     for k, v in dataAndSequencesMap.items():
         index += 1
@@ -148,10 +151,10 @@ def putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna,input_p
         seq_label = Label(secondFrame,text = v)
         lbls.append(chain_label)
         lbls.append(seq_label)
-        chain_label.pack(pady = (30, 0))
-        seq_label.pack(pady = (30, 0))
+        chain_label.pack(pady = (5, 0))
+        seq_label.pack(pady = (10, 0))
         btn = Button(secondFrame, text = "Ejecutar cadena "+str(index), command = lambda k = k, v = v : blast_query(pdb_id, k, v,input_path))
-        btn.pack(pady = 5)
+        btn.pack(pady = (15,15))
         btns.append(btn)
 
     if len(rna) > 1:
@@ -165,6 +168,7 @@ def putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna,input_p
 
 #Busqueda de proteinas homologas con blastp
 def blast_query(pdb_id, data, sequence,input_path):
+    search_label.config(text = "Por favor, espere...")
     search_label.pack(pady=(0,30))
     progress_bar.pack(pady=(0,30))
     progress_bar.start()
@@ -295,32 +299,31 @@ def delete_unused_files(input_path):
 #UI principal
 
 titleLabel = Label(secondFrame, text="Visualizador de regiones conservadas de estructuras homólogas a distintos niveles")
-titleLabel.pack(anchor=CENTER)
-titleLabel.config(font=("Verdana",25)) 
+titleLabel.pack(anchor=CENTER, pady = (0,15))
+titleLabel.config(font=("Verdana",18)) 
 
 pdbLabel = Label(secondFrame, text="Ingrese un código PDB: ")
 pdbLabel.pack(anchor=CENTER)
-pdbLabel.config(font=("Verdana",15))
+pdbLabel.config(font=("Verdana",10))
 
 pdbTextbox = Entry(secondFrame, width=30)
 pdbTextbox.pack()
 
 evalueLabel = Label(secondFrame, text="eValue: ")
 evalueLabel.pack(anchor=CENTER)
-evalueLabel.config(font=("Verdana",15))
+evalueLabel.config(font=("Verdana",10))
 
 evalueTextbox = Entry(secondFrame, width=30, textvariable=evalue)
 evalueTextbox.pack()
 
 coverageLabel = Label(secondFrame, text="Coverage: ")
 coverageLabel.pack(anchor=CENTER)
-coverageLabel.config(font=("Verdana",15))
+coverageLabel.config(font=("Verdana",10))
 
 coverageTextbox = Entry(secondFrame, width=30,textvariable=coverage)
 coverageTextbox.pack()
 
 myButton = Button(secondFrame, text="Procesar", command = getPDB)
-myButton.pack(anchor=CENTER)
-#myButton.pack(pady = (0, 30))
+myButton.pack(anchor=CENTER, pady = (0, 15))
 
 root.mainloop()
