@@ -36,10 +36,14 @@ python main.py
 
 7. Dentro de la carpeta "ejecucion-{fecha y hora de la misma}" se encuentran los logs indicando cada proceso realizado, un workspace de pymol para observar con mayor detalle el alineamiento y el alineamiento que produce clustal.
 
-8. Abrir el archivo pse de pymol con una version igual o arriba de 2.4 (https://pymol.org/2/).
+8. Abrir el archivo .pse de pymol con una version igual o arriba de 2.4 (https://pymol.org/2/).
 
+### Notas
+- Puede volver a ejecutar una busqueda pulsando nuevamente el boton "Procesar"
+- Para salir del modo pantalla completa, presione la tecla "Esc"
+- En la primer ejecucion puede demorar la interfaz ya que se descarga la base de datos PDB
 
 ### Known Issues
 - Scrollbar: Se requiere maximizar/minimizar la ventana para que se muestre.
 - Interfaz bloqueada al procesar.
-- Al realizar un nuevo procesamiento, no se eliminan los botones de las cadenas anteriores.
+- La ejecucion de pymol puede demorar mas de lo pensado o no responder.
