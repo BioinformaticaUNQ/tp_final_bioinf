@@ -2,6 +2,7 @@
 
 ## Prerequisitos
 - [Instalar Conda](https://docs.conda.io/en/latest/)
+- Distribución de GNU/Linux.
 
 ## Instalación del entorno
 - Clonar repositorio
