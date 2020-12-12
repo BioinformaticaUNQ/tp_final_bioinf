@@ -215,7 +215,7 @@ def generate_alignment_view(outputPath,pdb_id,input_path):
                         if(pdb.split(" ")[0].split("_")[0] != ""):
                             pdbs.append(pdb.split(" ")[0].split("_")[0])
                 if seqText != "":
-                    raw_seqs.append(seqText)
+                    raw_seqs.append(seqText.replace('\n', ""))
                     seqText = "" 
                 raw_seqs.append(sq)
             else:
