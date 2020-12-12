@@ -8,7 +8,7 @@ from Bio import SeqIO
 
 secondary_map = {}
 
-def generate_2structures(pdbs_to_process,output_path,pdb_id):
+def generate_2structures(pdbs_to_process,output_path,pdb_id,logger):
     print(pdbs_to_process)
     pdb_files = []
     for pdbs_id in pdbs_to_process:

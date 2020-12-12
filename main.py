@@ -63,25 +63,40 @@ if not os.path.isfile("./db/pdbaa.pdb"):
 def getPDB():
     input_path = "./ejecucion-" + datetime.today().strftime('%Y-%m-%d-%H:%M:%S')
     os.mkdir(input_path)
-    logging.basicConfig(filename=input_path + "/info.log",filemode='w',level=logging.INFO)
+    logger = logging.getLogger(input_path)
+    logger.setLevel(logging.INFO)
+    # create file handler which logs even debug messages
+    fh = logging.FileHandler(input_path + "/info.log")
+    fh.setLevel(logging.INFO)
+    # create console handler with a higher log level
+    ch = logging.StreamHandler()
+    ch.setLevel(logging.ERROR)
+    # create formatter and add it to the handlers
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    fh.setFormatter(formatter)
+    ch.setFormatter(formatter)
+    # add the handlers to the logger
+    logger.addHandler(fh)
+    logger.addHandler(ch)
+    # logging.basicConfig(filename=input_path + "/info.log",filemode='w',level=logging.INFO)
     pdb_id = str(pdbTextbox.get())
     url = "https://files.rcsb.org/download/"+ pdb_id +".pdb"
     try:
         urllib.request.urlretrieve(url, pdb_id + ".pdb")
-        logging.info("Obtenido pdb de: " + url)
+        logger.info("Obtenido pdb de: " + url)
     except Exception as e:
-        logging.info(str(e))
+        logger.info(str(e))
         print(str(e))
         if(str(e) == "HTTP Error 404: Not Found"):
-            logging.info("Código pdb inválido")
+            logger.info("Código pdb inválido")
             messagebox.showerror("Error", "Código pdb inválido")
         else:
-            logging.info("Hubo un error al obtener la proteína")
+            logger.info("Hubo un error al obtener la proteína")
             messagebox.showerror("Error", "Hubo un error al obtener la proteína")
         return
 
     resetGUI()
-    getFASTA(pdb_id,input_path)
+    getFASTA(pdb_id,input_path,logger)
 
 def resetGUI():
     for button in btns:
@@ -91,13 +106,13 @@ def resetGUI():
         label.destroy()
 
 #Descarga fasta del pdb ingresado
-def getFASTA(pdb_id,input_path):
+def getFASTA(pdb_id,input_path,logger):
     url2 = "https://www.rcsb.org/fasta/entry/"+pdb_id+"/download"
     urllib.request.urlretrieve(url2, input_path + "/" + pdb_id + ".fasta")
-    logging.info("Obtenido fasta de: " + url2)
-    getSequencesFromPDB(pdb_id,input_path)
+    logger.info("Obtenido fasta de: " + url2)
+    getSequencesFromPDB(pdb_id,input_path,logger)
 
-def getSequencesFromPDB(pdb_id,input_path):
+def getSequencesFromPDB(pdb_id,input_path,logger):
     fasta_string = open(input_path + "/" + pdb_id + ".fasta").read()
     sequences = []
     data = []
@@ -117,7 +132,7 @@ def getSequencesFromPDB(pdb_id,input_path):
     numberOfSequences = len(sequences)
     dataAndSequencesMap = dict(zip(data,sequences))
 
-    putNumberOfSequencesLabel(pdb_id, numberOfSequences, dataAndSequencesMap, rna,input_path)
+    putNumberOfSequencesLabel(pdb_id, numberOfSequences, dataAndSequencesMap, rna,input_path,logger)
 
 def isRNA(sequence):
     return len("".join(dict.fromkeys(sequence))) == 4
@@ -125,7 +140,7 @@ def isRNA(sequence):
 def oddNumber(number):
     return number % 2 != 0
 
-def putNumberOfSequencesLabel(pdb_id, numberOfSequences, dataAndSequencesMap, rna,input_path):
+def putNumberOfSequencesLabel(pdb_id, numberOfSequences, dataAndSequencesMap, rna,input_path,logger):
     if (numberOfSequences > 1):
         numberOfSequenceLabel = Label(secondFrame, text = "El código " + pdb_id + " tiene " + str(numberOfSequences) + " secuencias")
         numberOfSequenceLabel.pack(pady = (0, 15))
@@ -133,9 +148,9 @@ def putNumberOfSequencesLabel(pdb_id, numberOfSequences, dataAndSequencesMap, rn
         numberOfSequenceLabel = Label(secondFrame, text = "El código " + pdb_id + " tiene 1 sola secuencia")
         numberOfSequenceLabel.pack(pady = (0, 15))
     lbls.append(numberOfSequenceLabel)
-    putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna,input_path)
+    putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna,input_path,logger)
 
-def putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna,input_path):
+def putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna,input_path,logger):
     selectSequenceLabel = Label(secondFrame, text = "Cadenas")
     selectSequenceLabel.config(font=("Courier", 20))
     lbls.append(selectSequenceLabel)
@@ -151,7 +166,7 @@ def putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna,input_p
         lbls.append(seq_label)
         chain_label.pack(pady = (5, 0))
         seq_label.pack(pady = (10, 0))
-        btn = Button(secondFrame, text = "Ejecutar cadena "+str(index), command = lambda k = k, v = v : blast_query(pdb_id, k, v,input_path))
+        btn = Button(secondFrame, text = "Ejecutar cadena "+str(index), command = lambda k = k, v = v : blast_query(pdb_id, k, v,input_path,logger))
         btn.pack(pady = (15,15))
         btns.append(btn)
 
@@ -165,45 +180,45 @@ def putSequencesLabelAndButtonsToChoose(pdb_id, dataAndSequencesMap, rna,input_p
         rnaLabel.pack(pady = (30, 0))
 
 #Busqueda de proteinas homologas con blastp
-def blast_query(pdb_id, data, sequence,input_path):
+def blast_query(pdb_id, data, sequence,input_path,logger):
     search_label.config(text = "Por favor, espere...")
     search_label.pack(pady=(0,30))
     progress_bar.pack(pady=(0,30))
     progress_bar.start()
     root.update_idletasks()
 
-    logging.info("Eligio la secuencia " + sequence)    
-    logging.info("Se ejecuta la busqueda de proteinas homologas con los siguientes parametros:")
-    logging.info("Porcentaje de identidad: >40%")
-    logging.info("Porcentaje de coverage: >" + str(coverage.get()))
-    logging.info("eValue: " + str(evalue.get()))
-    logging.info("El resto de los valores son estandares de blastp")
-    logging.info("https://biopython.readthedocs.io/en/latest/chapter_blast.html")
+    logger.info("Eligio la secuencia " + sequence)    
+    logger.info("Se ejecuta la busqueda de proteinas homologas con los siguientes parametros:")
+    logger.info("Porcentaje de identidad: >40%")
+    logger.info("Porcentaje de coverage: >" + str(coverage.get()))
+    logger.info("eValue: " + str(evalue.get()))
+    logger.info("El resto de los valores son estandares de blastp")
+    logger.info("https://biopython.readthedocs.io/en/latest/chapter_blast.html")
     if(coverage.get() < 0 or coverage.get() > 100):
         messagebox.showerror("Error", "El pocentaje de coverage debe estar entre 0 y 100")
         return
     if(evalue.get() < 0 or evalue.get() > 0.5):
         messagebox.showerror("Error", "El evalue esperado debe estar entre 0 y 0.5")
         return
-    fasta_seq = blast_service.blastp_query(pdb_id,evalue.get(),coverage.get(),data,sequence,input_path)
+    fasta_seq = blast_service.blastp_query(pdb_id,evalue.get(),coverage.get(),data,sequence,input_path,logger)
     define_progress(25)
-    align_and_generate_structures(pdb_id, fasta_seq, sequence, data,input_path)
+    align_and_generate_structures(pdb_id, fasta_seq, sequence, data,input_path,logger)
     
 #Alineamiento de estructura primaria con proteinas homologas usando clustal
-def align_and_generate_structures(pdb_id, fasta_seq, sequence, data,input_path):
-    logging.info("Se ejecuto un alineamiento multiple de la cadena problema junto con las proteinas homologas obtenidas previamente")
-    logging.info("Esto se ejecuto con Clustal Omega, utilizando como parametro un archivo fasta con todas las cadenas y con el resto de valores por default")
-    logging.info("http://www.clustal.org/omega/")
-    output_path = clustal_service.run_clustal(pdb_id,fasta_seq,input_path)
+def align_and_generate_structures(pdb_id, fasta_seq, sequence, data,input_path,logger):
+    logger.info("Se ejecuto un alineamiento multiple de la cadena problema junto con las proteinas homologas obtenidas previamente")
+    logger.info("Esto se ejecuto con Clustal Omega, utilizando como parametro un archivo fasta con todas las cadenas y con el resto de valores por default")
+    logger.info("http://www.clustal.org/omega/")
+    output_path = clustal_service.run_clustal(pdb_id,fasta_seq,input_path,logger)
     if(output_path is None):
         return
     define_progress(50)
-    generate_alignment_view(output_path,pdb_id,input_path)
-    generate_3structure(pdb_id,input_path)
+    generate_alignment_view(output_path,pdb_id,input_path,logger)
+    generate_3structure(pdb_id,input_path,logger)
 
 #Genera el alineamiento de las estructuras secundarias.
 #Genera graficos con logomaker para mostrar los grados de conservacion de la estructura secundaria y primaria
-def generate_alignment_view(outputPath,pdb_id,input_path):
+def generate_alignment_view(outputPath,pdb_id,input_path,logger):
     pdbs = []
     raw_seqs =[]
     with open(outputPath, "r") as f:
@@ -224,7 +239,7 @@ def generate_alignment_view(outputPath,pdb_id,input_path):
     pdbs_set = list(set(pdbs))
     pdbs_set.append(pdb_id)
     pdbs_to_process.extend(pdbs_set[-10:])
-    second_structure_fasta = dssp_service.generate_2structures(pdbs_to_process,input_path,pdb_id)
+    second_structure_fasta = dssp_service.generate_2structures(pdbs_to_process,input_path,pdb_id,logger)
     raw_seqs2 =[]
     with open(second_structure_fasta, "r") as f:
         seqText = ""
@@ -237,22 +252,22 @@ def generate_alignment_view(outputPath,pdb_id,input_path):
             else:
                 seqText += sq
     seqs2 = [seq.strip() for seq in raw_seqs2 if ('#' not in seq) and ('>') not in seq]
-    logomaker_service.primary_structure_conservation(seqs,pdb_id,secondFrame,logging,lbls,input_path)
-    logomaker_service.secondary_structure_conservation(seqs2,pdb_id,secondFrame,logging,lbls,input_path)
+    logomaker_service.primary_structure_conservation(seqs,pdb_id,secondFrame,logger,lbls,input_path)
+    logomaker_service.secondary_structure_conservation(seqs2,pdb_id,secondFrame,logger,lbls,input_path)
     define_progress(75)
 
 
 #Genera alineamiento de las estructuras secundarias con pymol
-def generate_3structure(pdb_id,input_path):
+def generate_3structure(pdb_id,input_path,logger):
     define_progress(90)
 
-    logging.info("Se corre Pymol con las proteínas: " + str(pdbs_to_process))
-    logging.info("Se utilizan los comandos fetch , alignto y el formato cartoon para el gráfico")
-    logging.info("https://pymol.org/2/")
-    pymol_service.generate_3structure_image(pdb_id,pdbs_to_process,input_path)
+    logger.info("Se corre Pymol con las proteínas: " + str(pdbs_to_process))
+    logger.info("Se utilizan los comandos fetch , alignto y el formato cartoon para el gráfico")
+    logger.info("https://pymol.org/2/")
+    pymol_service.generate_3structure_image(pdb_id,pdbs_to_process,input_path,logger)
 
-    logging.info("Se generó un espacio de trabajo Pymol en la carpeta: " + input_path)
-    logging.info("Puede utilizarlo para ver en detalle las estructuras alineadas")
+    logger.info("Se generó un espacio de trabajo Pymol en la carpeta: " + input_path)
+    logger.info("Puede utilizarlo para ver en detalle las estructuras alineadas")
     pymol_label = Label(secondFrame,text="Alineamiento de estructura terciaria: ")
     pymol_label.config(font=("Verdana",20))
     pymol_label_pse = Label(secondFrame,text="(Para verlo en detalle abrir el archivo .pse, guardado en la carpeta de ejecucion actual, con Pymol)")

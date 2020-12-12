@@ -3,7 +3,7 @@ from Bio.Blast import NCBIWWW, NCBIXML
 
 import os
 
-def blastp_query(pdb_id,evalue,coverage,data,sequence,input_path):
+def blastp_query(pdb_id,evalue,coverage,data,sequence,input_path,logger):
     blast = pdb_id + ".xml"
     cline = NcbiblastpCommandline(query=input_path + "/" + pdb_id + '.fasta', db="./db/pdbaa",
                               evalue=evalue, out=blast, outfmt=5,qcov_hsp_perc=coverage)
