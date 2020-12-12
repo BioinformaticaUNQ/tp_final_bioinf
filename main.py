@@ -51,13 +51,11 @@ if not os.path.isfile("./db/pdbaa.pdb"):
     try:
         if not os.path.isfile("./db/db.tar.gz"):
             print("Descargando base de datos...")
-            logging.info("Descargando base de datos...")
             urllib.request.urlretrieve(url, "./db/db.tar.gz")
         tar = tarfile.open("./db/db.tar.gz")
         tar.extractall(path="./db")
         tar.close()
     except Exception as e:
-        logging.info("Hubo un error al obtener la base de datos pdb")
         messagebox.showerror("Error", "Hubo un error al obtener la base de datos pdb")
         exit()
 
@@ -65,7 +63,7 @@ if not os.path.isfile("./db/pdbaa.pdb"):
 def getPDB():
     input_path = "./ejecucion-" + datetime.today().strftime('%Y-%m-%d-%H:%M:%S')
     os.mkdir(input_path)
-    logging.basicConfig(filename=input_path + "/info.log",level=logging.INFO)
+    logging.basicConfig(filename=input_path + "/info.log",filemode='w',level=logging.INFO)
     pdb_id = str(pdbTextbox.get())
     url = "https://files.rcsb.org/download/"+ pdb_id +".pdb"
     try:
@@ -197,6 +195,8 @@ def align_and_generate_structures(pdb_id, fasta_seq, sequence, data,input_path):
     logging.info("Esto se ejecuto con Clustal Omega, utilizando como parametro un archivo fasta con todas las cadenas y con el resto de valores por default")
     logging.info("http://www.clustal.org/omega/")
     output_path = clustal_service.run_clustal(pdb_id,fasta_seq,input_path)
+    if(output_path is None):
+        return
     define_progress(50)
     generate_alignment_view(output_path,pdb_id,input_path)
     generate_3structure(pdb_id,input_path)
@@ -253,7 +253,6 @@ def generate_3structure(pdb_id,input_path):
 
     logging.info("Se generó un espacio de trabajo Pymol en la carpeta: " + input_path)
     logging.info("Puede utilizarlo para ver en detalle las estructuras alineadas")
-
     pymol_label = Label(secondFrame,text="Alineamiento de estructura terciaria: ")
     pymol_label.config(font=("Verdana",20))
     pymol_label_pse = Label(secondFrame,text="(Para verlo en detalle abrir el archivo .pse, guardado en la carpeta de ejecucion actual, con Pymol)")

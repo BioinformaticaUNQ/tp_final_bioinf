@@ -31,15 +31,11 @@ def generate_2structures(pdbs_to_process,output_path,pdb_id):
                 chain_map[key[0]].append(key)
             else:
                 chain_map[key[0]] = [key]
-
         for chain,keys in chain_map.items():
             seq = ""
             for chainPart in keys:
-                #OBTENGO LAS ESTRUCTURAS DE LA CADENA A
-                if(dssp_dict[chainPart][0] == 'a'):
-                    seq += 'C'
-                else:
-                    seq += dssp_dict[chainPart][0]
+                seq += dssp_dict[chainPart][1]
+
             pdb_name = pdb_file.split('/')[2].split('.')[0] + "_" + chain
             secondary_map[pdb_name] = seq
 
@@ -72,7 +68,6 @@ def get_primary_map(pdb_id,input_path):
         print(sequence.id)
         seq_map[sequence.id] = sequence.seq
 
-    print(seq_map)
     return seq_map
 
 
