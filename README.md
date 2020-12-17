@@ -1,5 +1,11 @@
 # TP Final Bioinformática
 
+## Integrantes
+- Matias Cavallin
+- Ignacio Lamandia
+- Esteban Matas
+- Gaston Veliez
+
 ## Prerequisitos
 - [Instalar Conda](https://docs.conda.io/en/latest/)
 - Distribución de GNU/Linux.
